@@ -133,3 +133,135 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/URP Settings
+  artifactKey: Guid(e600dc2c35bac4e45811a5ddaea966de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/URP Settings using Guid(e600dc2c35bac4e45811a5ddaea966de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79b4c993ded00e165bf0f4367fd7eaf6') in 0.026135 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 24.389718 seconds.
+  path: Assets/URP Settings/UniversalRenderPipelineAsset.asset
+  artifactKey: Guid(b92a4b015b9b55748a0ad5d8cda3cec9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/URP Settings/UniversalRenderPipelineAsset.asset using Guid(b92a4b015b9b55748a0ad5d8cda3cec9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed2dcc64a92b9bd3a3344803fd5755ca') in 0.075479 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000298 seconds.
+  path: Assets/URP Settings/UniversalRenderPipelineAsset_Renderer.asset
+  artifactKey: Guid(f55257afea6f52642a593a6f7936f14d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/URP Settings/UniversalRenderPipelineAsset_Renderer.asset using Guid(f55257afea6f52642a593a6f7936f14d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e96cca6535766bb12684f1436261f3a') in 0.032463 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 40.185146 seconds.
+  path: Assets/URP Settings/2D Renderer Data.asset
+  artifactKey: Guid(b3d59af0251efca478fe7d0a9f0702af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/URP Settings/2D Renderer Data.asset using Guid(b3d59af0251efca478fe7d0a9f0702af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92138a51e058c7af539c3e75cf5668df') in 0.033379 seconds 
+========================================================================
+Received Prepare
+Switching render pipeline 00000000000000000000000000000000 -> b92a4b015b9b55748a0ad5d8cda3cec9
+Refreshing native plugins compatible for Editor in 6.17 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 22 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 70.2 MB.
+System memory in use after: 70.1 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 3742.
+Total: 7.328800 ms (FindLiveObjects: 0.409800 ms CreateObjectMapping: 0.139100 ms MarkObjects: 6.507900 ms  DeleteObjects: 0.269900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:srp/default-shader: 0000e00a000e0de00000e000e02d0000 -> 0000e00a000e0de00000e000e0000000
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 57.830740 seconds.
+  path: Assets/URP Settings/UniversalRenderPipelineAsset.asset
+  artifactKey: Guid(b92a4b015b9b55748a0ad5d8cda3cec9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/URP Settings/UniversalRenderPipelineAsset.asset using Guid(b92a4b015b9b55748a0ad5d8cda3cec9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4e05b468dc048592153c8a753434029') in 0.010591 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.610218 seconds.
+  path: Assets/URP Settings/2D Renderer Data.asset
+  artifactKey: Guid(b3d59af0251efca478fe7d0a9f0702af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/URP Settings/2D Renderer Data.asset using Guid(b3d59af0251efca478fe7d0a9f0702af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7217ce6478e666cb4f16354cd111b611') in 0.026311 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000307 seconds.
+  path: Assets/URP Settings/UniversalRenderPipelineAsset.asset
+  artifactKey: Guid(b92a4b015b9b55748a0ad5d8cda3cec9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/URP Settings/UniversalRenderPipelineAsset.asset using Guid(b92a4b015b9b55748a0ad5d8cda3cec9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '768067028f980004cc298271a71fb1a9') in 0.028854 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 294.324310 seconds.
+  path: Assets/Scenes/GridTesting.unity
+  artifactKey: Guid(30b10c7b21c2d514caf122a7e2ea20c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/GridTesting.unity using Guid(30b10c7b21c2d514caf122a7e2ea20c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '118ec1e5380cca74b348770ea2f159a7') in 0.003412 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.018669 seconds.
+  path: Assets/Scenes/CharacterTesting.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/CharacterTesting.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef2e1436901b2a7b23ca84340c309392') in 0.003853 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 222.164697 seconds.
+  path: Assets/Sprites/Hex Tiles
+  artifactKey: Guid(2022b7fac22efd847a95949fefd8f510) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hex Tiles using Guid(2022b7fac22efd847a95949fefd8f510) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff1afcb98bc845ae6039a8038dc8daab') in 0.009339 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 23.887418 seconds.
+  path: Assets/Sprites/Hex Tiles/fantasyhextiles_randr_4_v1.png
+  artifactKey: Guid(3d3f65bd1db97c54ebca09892cb06a52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hex Tiles/fantasyhextiles_randr_4_v1.png using Guid(3d3f65bd1db97c54ebca09892cb06a52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '847792261ce27771aece3c062e013919') in 0.092363 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000303 seconds.
+  path: Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png
+  artifactKey: Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png using Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a50f3b7e8cbcf9e4ca41fcffdfd302a') in 0.027737 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000349 seconds.
+  path: Assets/Sprites/Hex Tiles/fantasyhextiles_v3.png
+  artifactKey: Guid(3f460e5fd0d895a45a6a983e47dc7202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hex Tiles/fantasyhextiles_v3.png using Guid(3f460e5fd0d895a45a6a983e47dc7202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a6ff4c04437e1c9c3aed4cac3f45e0b') in 0.035964 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 201.807352 seconds.
+  path: Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png
+  artifactKey: Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png using Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6015f716ae2926af700980fcbd9f131') in 0.019059 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.728939 seconds.
+  path: Assets/Sprites/Hex Tiles/fantasyhextiles_v3.png
+  artifactKey: Guid(3f460e5fd0d895a45a6a983e47dc7202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hex Tiles/fantasyhextiles_v3.png using Guid(3f460e5fd0d895a45a6a983e47dc7202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02c1379a44552126fae34a1478baf662') in 0.030255 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 53.352419 seconds.
+  path: Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png
+  artifactKey: Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png using Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '046c00e4093a573b4c7320836b97f781') in 0.017704 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.560612 seconds.
+  path: Assets/Sprites/Hex Tiles/fantasyhextiles_v3.png
+  artifactKey: Guid(3f460e5fd0d895a45a6a983e47dc7202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hex Tiles/fantasyhextiles_v3.png using Guid(3f460e5fd0d895a45a6a983e47dc7202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db64980866e6650d3058e67e355db475') in 0.017891 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1270.083623 seconds.
+  path: Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png
+  artifactKey: Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png using Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c339e1318cdc6d13c23b71637977146') in 0.238678 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
