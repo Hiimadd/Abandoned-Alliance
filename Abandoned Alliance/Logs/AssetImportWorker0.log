@@ -15,11 +15,11 @@ C:/Users/Quang Nguyen/Documents/GitHub/Abandoned-Alliance/Abandoned Alliance
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51473
+63361
 Successfully changed project path to: C:/Users/Quang Nguyen/Documents/GitHub/Abandoned-Alliance/Abandoned Alliance
 C:/Users/Quang Nguyen/Documents/GitHub/Abandoned-Alliance/Abandoned Alliance
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 148.25 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 74.10 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.39f1 (fd6670bb8be9)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.39f1/Editor/Data/Resources/UnitySubsystems
@@ -35,92 +35,92 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.39f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.39f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.39f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56672
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56536
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.39f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.39f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003671 seconds.
+Registered in 0.002451 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 94.92 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 67.52 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.236 seconds
+- Completed reload, in  0.608 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1237ms)
-		BeginReloadAssembly (178ms)
+	ReloadAssembly (608ms)
+		BeginReloadAssembly (66ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (2ms)
-		EndReloadAssembly (882ms)
-			LoadAssemblies (172ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (470ms)
+			LoadAssemblies (64ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (319ms)
+			SetupTypeCache (140ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (42ms)
-			SetupLoadedEditorAssemblies (314ms)
+			RebuildScriptCaches (31ms)
+			SetupLoadedEditorAssemblies (200ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (95ms)
-				BeforeProcessingInitializeOnLoad (21ms)
-				ProcessInitializeOnLoadAttributes (143ms)
-				ProcessInitializeOnLoadMethodAttributes (46ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (68ms)
+				BeforeProcessingInitializeOnLoad (17ms)
+				ProcessInitializeOnLoadAttributes (84ms)
+				ProcessInitializeOnLoadMethodAttributes (27ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005968 seconds.
+Registered in 0.004068 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 130.36 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 67.57 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.152 seconds
+- Completed reload, in  1.219 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2154ms)
-		BeginReloadAssembly (256ms)
+	ReloadAssembly (1220ms)
+		BeginReloadAssembly (155ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (38ms)
-		EndReloadAssembly (1789ms)
-			LoadAssemblies (175ms)
+			CreateAndSetChildDomain (21ms)
+		EndReloadAssembly (1002ms)
+			LoadAssemblies (108ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (564ms)
+			SetupTypeCache (316ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (101ms)
-			SetupLoadedEditorAssemblies (728ms)
+			RebuildScriptCaches (60ms)
+			SetupLoadedEditorAssemblies (411ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
+				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (130ms)
-				BeforeProcessingInitializeOnLoad (174ms)
-				ProcessInitializeOnLoadAttributes (370ms)
-				ProcessInitializeOnLoadMethodAttributes (35ms)
-				AfterProcessingInitializeOnLoad (9ms)
+				RefreshPlugins (68ms)
+				BeforeProcessingInitializeOnLoad (109ms)
+				ProcessInitializeOnLoadAttributes (199ms)
+				ProcessInitializeOnLoadMethodAttributes (24ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (2ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 1.28 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3359 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 144.0 MB.
-System memory in use after: 143.9 MB.
+Unloading 3310 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 139.8 MB.
+System memory in use after: 139.7 MB.
 
-Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3787.
-Total: 6.749200 ms (FindLiveObjects: 0.432000 ms CreateObjectMapping: 0.247300 ms MarkObjects: 5.759500 ms  DeleteObjects: 0.308700 ms)
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 3740.
+Total: 4.363300 ms (FindLiveObjects: 0.339700 ms CreateObjectMapping: 0.093000 ms MarkObjects: 3.687600 ms  DeleteObjects: 0.241800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -135,693 +135,12 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png
-  artifactKey: Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png using Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16b16a5705e3fe6fdf0df413455deba7') in 0.436051 seconds 
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 5.78 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 21 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 76.2 MB.
-System memory in use after: 76.1 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 3827.
-Total: 5.485600 ms (FindLiveObjects: 0.360800 ms CreateObjectMapping: 0.139900 ms MarkObjects: 4.746000 ms  DeleteObjects: 0.237600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 113.341318 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette
-  artifactKey: Guid(9fa79b92d165bfa478916b14f24a3385) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette using Guid(9fa79b92d165bfa478916b14f24a3385) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '245d08232f1128332510408bad2770f4') in 0.011614 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.031661 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_1.asset
-  artifactKey: Guid(58a1ec093affe38498437db6108fcdd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_1.asset using Guid(58a1ec093affe38498437db6108fcdd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b37d5796aba1ff8ef1873ed53da425c8') in 0.031031 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000328 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_49.asset
-  artifactKey: Guid(cce9e80f3ea0d634ba2d17d39d2a4e44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_49.asset using Guid(cce9e80f3ea0d634ba2d17d39d2a4e44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a204c99689f7396e2d12b742d671212') in 0.016321 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000327 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_52.asset
-  artifactKey: Guid(27504aa8e71d2bb4fa64323d0bf84401) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_52.asset using Guid(27504aa8e71d2bb4fa64323d0bf84401) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a7bff364a92143b9371d7b1c740ce96') in 0.018908 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000331 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/Pixel Terrain.prefab
-  artifactKey: Guid(4266654b77002534096818e186ac5152) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/Pixel Terrain.prefab using Guid(4266654b77002534096818e186ac5152) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '456de6db0787dcdd914b97f2a3d7a9c4') in 0.086316 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000306 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_7.asset
-  artifactKey: Guid(6119da5bb87cc3c43b81852e5746c46d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_7.asset using Guid(6119da5bb87cc3c43b81852e5746c46d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '332b9bc50ca8df95be3893357ce338bf') in 0.017465 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000528 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_21.asset
-  artifactKey: Guid(66c2c476b5fd1354bb08129f8980f03d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_21.asset using Guid(66c2c476b5fd1354bb08129f8980f03d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0aab71c5e35263943dd888b632a1b777') in 0.017230 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000407 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_64.asset
-  artifactKey: Guid(54c3633901c777d4789b23ad360d0ac1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_64.asset using Guid(54c3633901c777d4789b23ad360d0ac1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8d86d939ad75449fb8c656b0329209a') in 0.017681 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000639 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_40.asset
-  artifactKey: Guid(82e7a851fe3c64940b745540fcbe65ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_40.asset using Guid(82e7a851fe3c64940b745540fcbe65ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad5d7c4ce02f080b1eb8b903ae824bfc') in 0.018731 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000274 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_46.asset
-  artifactKey: Guid(df0a9d3ff163f884b8904b2648558376) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_46.asset using Guid(df0a9d3ff163f884b8904b2648558376) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f93927e3332e26d6c24dc96cfbe8d18') in 0.019416 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000272 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_27.asset
-  artifactKey: Guid(99919c379da895d47be48a647d66c377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_27.asset using Guid(99919c379da895d47be48a647d66c377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '684c24f56a56cc1b29fab3e42d19ddc7') in 0.018202 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000328 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_28.asset
-  artifactKey: Guid(b64f89c7061209046bcd3645532ab29c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_28.asset using Guid(b64f89c7061209046bcd3645532ab29c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7329238fde23bd6ff4152334166aafa') in 0.016700 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000290 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_42.asset
-  artifactKey: Guid(727a1e51e6b31634b8ca6c54c3a92bca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_42.asset using Guid(727a1e51e6b31634b8ca6c54c3a92bca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '305e2c5747a0860b0ebb99f68cfe0f3c') in 0.018683 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000647 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_20.asset
-  artifactKey: Guid(d00c1ab6e3a1a9d468b7d308f30c3270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_20.asset using Guid(d00c1ab6e3a1a9d468b7d308f30c3270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '397331bd9aacf8203eb94a468b224766') in 0.019227 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000368 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_18.asset
-  artifactKey: Guid(a86b8e4b40b0cec41afd82ae1938ee9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_18.asset using Guid(a86b8e4b40b0cec41afd82ae1938ee9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b64dfe59717f83cdb0014edefee620d9') in 0.018314 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000521 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_48.asset
-  artifactKey: Guid(cce95ecf924210440b5307263aa70462) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_48.asset using Guid(cce95ecf924210440b5307263aa70462) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e58961bbcdaed314988f89819da67a3') in 0.023510 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000371 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_25.asset
-  artifactKey: Guid(81c6aaf0cc26cdd4cb99427269a1f687) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_25.asset using Guid(81c6aaf0cc26cdd4cb99427269a1f687) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '554a5d95fbeb2a8d06a140f1fb491b24') in 0.023695 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000307 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_22.asset
-  artifactKey: Guid(8e04852a246991644a57da78b3cf31f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_22.asset using Guid(8e04852a246991644a57da78b3cf31f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6f425cb2355dcd58c23a6709eba4397') in 0.019815 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000326 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_55.asset
-  artifactKey: Guid(168618e304003cf48bc6575a3c55ba79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_55.asset using Guid(168618e304003cf48bc6575a3c55ba79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82c3cb49cf00d7a17c07312f00617386') in 0.020257 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000329 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_26.asset
-  artifactKey: Guid(499f523bfd483c8499d947b593f637ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_26.asset using Guid(499f523bfd483c8499d947b593f637ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d84519a9205df0bcc247bb5584f1033') in 0.019979 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000325 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_44.asset
-  artifactKey: Guid(071d799f689d0e54387ee574a7adf617) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_44.asset using Guid(071d799f689d0e54387ee574a7adf617) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '808af4cdcb8e9aa376fe46d98c7b10c8') in 0.019291 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000293 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_31.asset
-  artifactKey: Guid(e5fd502b3d79338419af8468aa15f5c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_31.asset using Guid(e5fd502b3d79338419af8468aa15f5c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c836632c9df85d1d952169a379df0fc') in 0.018753 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000514 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_23.asset
-  artifactKey: Guid(a97d3c32e49dcdd40b3faf244246f7c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_23.asset using Guid(a97d3c32e49dcdd40b3faf244246f7c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcc9d0f4a4f2e177855ac29a193ed437') in 0.017631 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000661 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_41.asset
-  artifactKey: Guid(e354c40cf9a1fc04eaef1e9e393b39dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_41.asset using Guid(e354c40cf9a1fc04eaef1e9e393b39dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bd29b494afa463f6bcc39214f5a9559') in 0.018773 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000593 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_17.asset
-  artifactKey: Guid(c2b0d3d323753bb408a2719967898dd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_17.asset using Guid(c2b0d3d323753bb408a2719967898dd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e9a933826dd6876abf9f45d0d8a343f') in 0.018156 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000340 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_29.asset
-  artifactKey: Guid(11003e445f8a21a4cb643a23d39379d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_29.asset using Guid(11003e445f8a21a4cb643a23d39379d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e82f16873b3fb3282de7a72eac13c48') in 0.019905 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000313 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_50.asset
-  artifactKey: Guid(57763cd298c04094189b5f7244e4f648) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_50.asset using Guid(57763cd298c04094189b5f7244e4f648) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b145272145ffb95b55e055b9677a9c5') in 0.022013 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000365 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_6.asset
-  artifactKey: Guid(3ca37bb6baef2f4439d03df6cffcf36e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_6.asset using Guid(3ca37bb6baef2f4439d03df6cffcf36e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a293ad65f51c4c7c5c05bf9309baa61') in 0.019681 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000307 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_30.asset
-  artifactKey: Guid(80d17d9c0cc906e44a1969044517002b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_30.asset using Guid(80d17d9c0cc906e44a1969044517002b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f26c8ad55f7827aa9ab6b012618c60c5') in 0.019943 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000390 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_3.asset
-  artifactKey: Guid(08464c53d060c934596093f1ecff1f67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_3.asset using Guid(08464c53d060c934596093f1ecff1f67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85ecbf6634e1fa644b0555194f74bc0c') in 0.020296 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000311 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_5.asset
-  artifactKey: Guid(a775244199846ac41859f1e117243448) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_5.asset using Guid(a775244199846ac41859f1e117243448) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36f2de2a21107dbcb1d86125b7ffc06b') in 0.018268 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000336 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_43.asset
-  artifactKey: Guid(877c88f79bd80614e8d37553bbda31a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_43.asset using Guid(877c88f79bd80614e8d37553bbda31a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa754f614ccdd148f23d9f3e9ce35121') in 0.025656 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000385 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_19.asset
-  artifactKey: Guid(f021a67bd14ba1443a6ab2684377aee2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_19.asset using Guid(f021a67bd14ba1443a6ab2684377aee2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d076a43ba8bd9059c49fb608c5c59a1') in 0.024439 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000407 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_2.asset
-  artifactKey: Guid(a4c594dd03f7f2b4b9c5073b19a7181c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_2.asset using Guid(a4c594dd03f7f2b4b9c5073b19a7181c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b21fa4b745ac4cc16fa2f7aea3e7cb9') in 0.021493 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000313 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_53.asset
-  artifactKey: Guid(40cebaf68472d0143bcc6b06d7ae4a66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_53.asset using Guid(40cebaf68472d0143bcc6b06d7ae4a66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffa1072b123d0ad2b5ebd678d76b75ea') in 0.023401 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000351 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_45.asset
-  artifactKey: Guid(91db80f450db7ac4a96099ff8c76e5f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_45.asset using Guid(91db80f450db7ac4a96099ff8c76e5f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf4908411f7d2e93919c38bef55500de') in 0.031393 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000335 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_47.asset
-  artifactKey: Guid(10466ea883da5734a96fd376e68b19e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_47.asset using Guid(10466ea883da5734a96fd376e68b19e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47b9fd87562da1babe4a0a84c0ff64b0') in 0.023990 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000324 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_54.asset
-  artifactKey: Guid(fa8ac6fcf8d459d43be3e5e111c322b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_54.asset using Guid(fa8ac6fcf8d459d43be3e5e111c322b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec831ece0628709e4a52b6342524a81c') in 0.021554 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000481 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_4.asset
-  artifactKey: Guid(1010513589d9b344db33466609fa6aa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_4.asset using Guid(1010513589d9b344db33466609fa6aa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '482aed5718e4ebe03d3991f0e2870b72') in 0.018856 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000365 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_51.asset
-  artifactKey: Guid(fcfac8302261ea24dbffff3183c2eddc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_51.asset using Guid(fcfac8302261ea24dbffff3183c2eddc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4dc7b40b7d6f2d5525b3d076dce3547') in 0.019477 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000519 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_16.asset
-  artifactKey: Guid(29957204f04464b4eae1a58ef9d39a6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_16.asset using Guid(29957204f04464b4eae1a58ef9d39a6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a498db1b4512279eb426a8d37ac2d52') in 0.022300 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000348 seconds.
-  path: Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_24.asset
-  artifactKey: Guid(a7a25fac8bbbf7b4e9564d349b97a263) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Pixel Palette/fantasyhextiles_v3_borderless_24.asset using Guid(a7a25fac8bbbf7b4e9564d349b97a263) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e33efd9dccba8d4622cce97c96dc033') in 0.022159 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 94.565387 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette
-  artifactKey: Guid(48db17aaaee1a1347ab145152203a52e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette using Guid(48db17aaaee1a1347ab145152203a52e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8413b528e8fea27f80161f1446a650fe') in 0.013475 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.814389 seconds.
-  path: Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png
-  artifactKey: Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png using Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5230dc5c74b3c0bb8c9d31888a1b7623') in 0.181137 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.000882 seconds.
-  path: Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png
-  artifactKey: Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png using Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '908c592a585a03aadb45149a1669d16b') in 0.187150 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 417.391965 seconds.
-  path: Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png
-  artifactKey: Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png using Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '596b9474f663884777ad8c6381fa9c2e') in 0.225100 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.272377 seconds.
-  path: Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png
-  artifactKey: Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png using Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff6d06107d5e4537e71d101928de7e6a') in 0.191720 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.031611 seconds.
-  path: Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png
-  artifactKey: Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png using Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd9809fdd3893eca5429d1a7d5ce1818') in 0.198937 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 8.838147 seconds.
-  path: Assets/Sprites/Hex Tiles/fantasyhextiles_v3.png
-  artifactKey: Guid(3f460e5fd0d895a45a6a983e47dc7202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/fantasyhextiles_v3.png using Guid(3f460e5fd0d895a45a6a983e47dc7202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09762bca3958f09371a4da27c5d192d6') in 0.019391 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 33.572580 seconds.
-  path: Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png
-  artifactKey: Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png using Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4835fa1a597b85781ffc0b59f81073c9') in 0.198558 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.597099 seconds.
-  path: Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png
-  artifactKey: Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png using Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb0d9a535f9dcb2c177906620110249f') in 0.195291 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 7.497484 seconds.
-  path: Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png
-  artifactKey: Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png using Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e481fe1eace2e0376103420cbdcd4ddc') in 0.190678 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.503013 seconds.
-  path: Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png
-  artifactKey: Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png using Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0f2af2c1acdc681b1958bb3c2dacd80') in 0.212066 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 378.519658 seconds.
-  path: Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png
-  artifactKey: Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png using Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd980d73af799430df2b650a539a6a85a') in 0.219555 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 63.144778 seconds.
-  path: Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png
-  artifactKey: Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png using Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02d67a39f282fc398cd100c2ab2bb391') in 0.199296 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 32.200447 seconds.
-  path: Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png
-  artifactKey: Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png using Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c5e2c2ec57ace3eec8d2e3b1adc602e') in 0.201355 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.576243 seconds.
-  path: Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png
-  artifactKey: Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png using Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7b63af5b9ed954c0eed4adc8c3ebcc2') in 0.207145 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 95.906892 seconds.
-  path: Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png
-  artifactKey: Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png using Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22de886d2f4d3971690bd10ea787cea5') in 0.195246 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 22.517853 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_1.asset
-  artifactKey: Guid(1db736d762d809440bd98a6368711ce9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_1.asset using Guid(1db736d762d809440bd98a6368711ce9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e42a4970f473930455d29bcc95050b1') in 0.011570 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000280 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_19.asset
-  artifactKey: Guid(ac88f7ce7f71fb248897627942577103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_19.asset using Guid(ac88f7ce7f71fb248897627942577103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '353b1f4cefff09088f1fe0ebf763343f') in 0.011031 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000305 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_55.asset
-  artifactKey: Guid(55f7a9f99eb84b14db8f15989a38ae85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_55.asset using Guid(55f7a9f99eb84b14db8f15989a38ae85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7294ee158342ff8026c884678e43168f') in 0.008278 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000310 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_29.asset
-  artifactKey: Guid(6fc48f709c2c2684887e2b6c0a4ede9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_29.asset using Guid(6fc48f709c2c2684887e2b6c0a4ede9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '655924ee496fa1a4aee6bf6a3acbd2a5') in 0.012092 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000400 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_48.asset
-  artifactKey: Guid(95d377e1cbe0aab4090530c5c0d9a757) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_48.asset using Guid(95d377e1cbe0aab4090530c5c0d9a757) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85499b0d7435cad3f2d057e8ee351d51') in 0.009367 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000316 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_28.asset
-  artifactKey: Guid(adc8c6fa9476d164991d65bc87cec095) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_28.asset using Guid(adc8c6fa9476d164991d65bc87cec095) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd1f8b9ac706b42609bd0bdd6cd24010') in 0.013740 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000315 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_64.asset
-  artifactKey: Guid(d69d8fc8842044d488180f75369eed7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_64.asset using Guid(d69d8fc8842044d488180f75369eed7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4837a79a32e943ac3b96e559c74f5a64') in 0.029782 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000371 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_27.asset
-  artifactKey: Guid(0f855d36f91b17f49b43c35a41960ae0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_27.asset using Guid(0f855d36f91b17f49b43c35a41960ae0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45227f60e1d73208b0674069cbc1ae36') in 0.011505 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000548 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/Terrain Pixel.prefab
-  artifactKey: Guid(7979835771052d24db6fad7d35bc03d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/Terrain Pixel.prefab using Guid(7979835771052d24db6fad7d35bc03d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a89b8d6802cc907317845b2bf22884f') in 0.052430 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000302 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_43.asset
-  artifactKey: Guid(ea3e0baccf44f9248b09ab9f3ce0d4d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_43.asset using Guid(ea3e0baccf44f9248b09ab9f3ce0d4d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b629f43efb4015b9cc2590cf91d2643') in 0.015297 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000355 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_7.asset
-  artifactKey: Guid(e3c447791c4a7814cbc747fd639330c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_7.asset using Guid(e3c447791c4a7814cbc747fd639330c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cb4e3cea3a2f16ebe104e899510ded3') in 0.014072 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000381 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_6.asset
-  artifactKey: Guid(3531a912e681b594094094f3a5a93bb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_6.asset using Guid(3531a912e681b594094094f3a5a93bb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d744dae22d9fe0d009cc69dca62980b') in 0.013620 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000331 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_41.asset
-  artifactKey: Guid(b986b76d94fe8aa488d09cc8b78eb5e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_41.asset using Guid(b986b76d94fe8aa488d09cc8b78eb5e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b1f2931bcc7acfa82a7300a5b10ef56') in 0.013060 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000292 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_47.asset
-  artifactKey: Guid(735bd23e045b5f34b8ee702cef709fec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_47.asset using Guid(735bd23e045b5f34b8ee702cef709fec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2e1e4534d811fb393ecce16a60c2c1c') in 0.013210 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000413 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_17.asset
-  artifactKey: Guid(df316303c7fc99446839aa15db1d8082) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_17.asset using Guid(df316303c7fc99446839aa15db1d8082) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef5bae781608440d70735891c4dc6657') in 0.020024 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000541 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_25.asset
-  artifactKey: Guid(e245e2a8c584a7948947d8df70e82bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_25.asset using Guid(e245e2a8c584a7948947d8df70e82bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5b1b5ecb27d479c8ccd33401ae0cc98') in 0.011102 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000331 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_22.asset
-  artifactKey: Guid(25131aaa17659b54eb0fe4334e967d37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_22.asset using Guid(25131aaa17659b54eb0fe4334e967d37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '052ef3afe325d68e412fd2a74c5c77af') in 0.011295 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000310 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_30.asset
-  artifactKey: Guid(216d38d12237ec04aac532bc522be83f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_30.asset using Guid(216d38d12237ec04aac532bc522be83f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '985a0ad2451197ae6bf2f1e3ac2f09fb') in 0.007250 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000312 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_52.asset
-  artifactKey: Guid(8021c59d0adb9764bb23f5249a51aae2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_52.asset using Guid(8021c59d0adb9764bb23f5249a51aae2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e23abbdcf5069f98a210983d5fcece7c') in 0.007124 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000295 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_46.asset
-  artifactKey: Guid(2d6a1980e8c69ca4fa0e5d92e6a588b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_46.asset using Guid(2d6a1980e8c69ca4fa0e5d92e6a588b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd04112772f4c1bf475baf07eb600696f') in 0.010126 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000331 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_45.asset
-  artifactKey: Guid(196d4ab0ed87ac04e95d8fd5cfaf7c8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_45.asset using Guid(196d4ab0ed87ac04e95d8fd5cfaf7c8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e828540c711434c1152bd94d1cca2b7b') in 0.015501 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000286 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_3.asset
-  artifactKey: Guid(58465330573f97b4cbae58339c46fe62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_3.asset using Guid(58465330573f97b4cbae58339c46fe62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09c65dfe3fed11db679707f9f48ccae5') in 0.012408 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000348 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_24.asset
-  artifactKey: Guid(8552fc22f87bf1840b5a880030268acb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_24.asset using Guid(8552fc22f87bf1840b5a880030268acb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb9278660e005be592d42fbe0cda6042') in 0.011829 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000402 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_50.asset
-  artifactKey: Guid(8958d70b6a849e2459f7b7b6885a3dd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_50.asset using Guid(8958d70b6a849e2459f7b7b6885a3dd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44e08f27bba7290a52d600b7546d6ee6') in 0.019564 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000794 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_31.asset
-  artifactKey: Guid(e24a80a4990c68b4bbae02e5007a6855) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_31.asset using Guid(e24a80a4990c68b4bbae02e5007a6855) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aeaaf0dd282925741acbc741aacc5ff4') in 0.008812 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000315 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_53.asset
-  artifactKey: Guid(49c3fe225ad62ad43ba2ec4bec0af7e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_53.asset using Guid(49c3fe225ad62ad43ba2ec4bec0af7e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4737bf18ce5a67d3e1400bef03124f1') in 0.008465 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000293 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_26.asset
-  artifactKey: Guid(3dd31b4a57f5f2342bfff8736f8fb3b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_26.asset using Guid(3dd31b4a57f5f2342bfff8736f8fb3b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6752b27e27b74e08e91f430e695c3305') in 0.008162 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000312 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_4.asset
-  artifactKey: Guid(748f9d2b775680a408e8ae87fd0b07b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_4.asset using Guid(748f9d2b775680a408e8ae87fd0b07b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c75fa16343b9b7be4fa20117a64683d6') in 0.010120 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000314 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_23.asset
-  artifactKey: Guid(dfc9661382f8c0d41be70c95b1f31732) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_23.asset using Guid(dfc9661382f8c0d41be70c95b1f31732) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45e4e130d8bbba2b6a78a0e1a8e9ab45') in 0.012423 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000460 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_44.asset
-  artifactKey: Guid(a28d62f3d7e9f60419f50867bcb0e77d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_44.asset using Guid(a28d62f3d7e9f60419f50867bcb0e77d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba2e95db47e3d1aa98eb11bdb2b03d1a') in 0.014918 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000312 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_51.asset
-  artifactKey: Guid(d6f59e4b8f4c7cf47bfaf9f4ac50bda0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_51.asset using Guid(d6f59e4b8f4c7cf47bfaf9f4ac50bda0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31d738291388163174ca9acf740d6bb3') in 0.009546 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000396 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_16.asset
-  artifactKey: Guid(39f72290c4a365f4f99d55bdbfa387d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_16.asset using Guid(39f72290c4a365f4f99d55bdbfa387d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1170efde1a25c7a89543f499b55ecb54') in 0.011175 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000319 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_20.asset
-  artifactKey: Guid(8899a187930f5434cb2815dc3489dc63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_20.asset using Guid(8899a187930f5434cb2815dc3489dc63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6e2c6e72239ffbe5f93912352417d30') in 0.012570 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000313 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_21.asset
-  artifactKey: Guid(4e69ee2aacba3d74bada2c3aa81ca8fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_21.asset using Guid(4e69ee2aacba3d74bada2c3aa81ca8fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e6f6ba5d1f740b449bdd646b1f7761f') in 0.010905 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000362 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_40.asset
-  artifactKey: Guid(1bf66d6c07285544a93bbed90f0eb815) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_40.asset using Guid(1bf66d6c07285544a93bbed90f0eb815) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62f9467c12c9218fa78ad5206a617fa5') in 0.015534 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000335 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_2.asset
-  artifactKey: Guid(3b7618a97349d4243b004eb8cde810bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_2.asset using Guid(3b7618a97349d4243b004eb8cde810bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec2211f6a14d53b09f140659fd31f7da') in 0.023754 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000313 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_5.asset
-  artifactKey: Guid(f11e15c824c33504f953f3cb7b811af2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_5.asset using Guid(f11e15c824c33504f953f3cb7b811af2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e13c2a4249955813523c5db356f5e4c5') in 0.012735 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000307 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_18.asset
-  artifactKey: Guid(74d4ff427f4269a4d8b6735763ad74e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_18.asset using Guid(74d4ff427f4269a4d8b6735763ad74e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc98021eeffe5857621c6f355c52af4d') in 0.016624 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000470 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_54.asset
-  artifactKey: Guid(16059d580668c4b4b86eab2e452353f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_54.asset using Guid(16059d580668c4b4b86eab2e452353f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '517eabc1a8c819dde8fc2bbb9faa8754') in 0.015840 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000310 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_42.asset
-  artifactKey: Guid(9ed2816c7aae5614c9b9be9e6dc8fde2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_42.asset using Guid(9ed2816c7aae5614c9b9be9e6dc8fde2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f29b8dcba5a1351c8d70690537e626a') in 0.014266 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000300 seconds.
-  path: Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_49.asset
-  artifactKey: Guid(b853f8520f5c56b40b9eaa9955bef204) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/Terrain Palette/fantasyhextiles_v3_borderless_49.asset using Guid(b853f8520f5c56b40b9eaa9955bef204) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '621a59babbdb8fc1b3a18cde42c1f8e5') in 0.008584 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 223.807584 seconds.
-  path: Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png
-  artifactKey: Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/fantasyhextiles_v3_borderless.png using Guid(1a1916cb4c1d3f74bad87937e7a5abf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '397cf10037d4e4d5066ddebd2734174d') in 0.208856 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.370495 seconds.
-  path: Assets/Sprites/Hex Tiles/fantasyhextiles_randr_4_v1.png
-  artifactKey: Guid(3d3f65bd1db97c54ebca09892cb06a52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Hex Tiles/fantasyhextiles_randr_4_v1.png using Guid(3d3f65bd1db97c54ebca09892cb06a52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '091832ebf203b76167f7bfd7538adb4b') in 0.023276 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007143 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.785 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1786ms)
-		BeginReloadAssembly (245ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (14ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (95ms)
-		EndReloadAssembly (1416ms)
-			LoadAssemblies (193ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (495ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (63ms)
-			SetupLoadedEditorAssemblies (515ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (155ms)
-				ProcessInitializeOnLoadAttributes (321ms)
-				ProcessInitializeOnLoadMethodAttributes (21ms)
-				AfterProcessingInitializeOnLoad (10ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.00 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3261 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 141.8 MB.
-System memory in use after: 141.8 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3840.
-Total: 5.971300 ms (FindLiveObjects: 0.388500 ms CreateObjectMapping: 0.179200 ms MarkObjects: 5.115300 ms  DeleteObjects: 0.286200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+  path: Assets/Scenes/GridTesting.unity
+  artifactKey: Guid(30b10c7b21c2d514caf122a7e2ea20c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/GridTesting.unity using Guid(30b10c7b21c2d514caf122a7e2ea20c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b1663edd57cdb05be65adbead453bda') in 0.013688 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.776586 seconds.
+  path: Assets/Scenes/Map1.unity
+  artifactKey: Guid(30b10c7b21c2d514caf122a7e2ea20c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map1.unity using Guid(30b10c7b21c2d514caf122a7e2ea20c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc3222e89347739035f8d7ac975e74bb') in 0.007997 seconds 
