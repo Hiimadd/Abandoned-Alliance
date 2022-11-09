@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CharacterTesting.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: e0a6c1991fc8a5c40a619e416fb4720e
+  - enabled: 1
+    path: Assets/Scenes/Lobby.unity
+    guid: 2fb289d4714a3bd4d8e6fa40d91be51b
+  - enabled: 1
+    path: Assets/Scenes/Settings.unity
+    guid: 74708eb768846c64b9bdd77a52bb4142
   m_configObjects: {}
