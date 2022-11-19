@@ -4,13 +4,35 @@ using UnityEngine;
 
 public class MoveAbility : Ability
 {
-    public override void UseAbility(int X, int Y)
+    protected override void toggleAbilityHighlights()
     {
-        //placeholder
-        attachedHero.updatePosition(X, Y);
+        Tile currLoc = attachedHero.getCurrentPos();
+            for(int i = -1; i < 2; ++i)
+            {
+                for(int j = -1; j < 2; ++j)
+                {
+                    if(j == 0 && i == 0) {continue;}
+                    Tile toHighlight = attachedHero.getMapManager().getPos(currLoc.getX() + i, currLoc.getY() +j);
+                    if(toHighlight != null) {toHighlight.toggleAbilityHighlight();}
+                }
+            }
     }
 
-    public MoveAbility()
+    public override void UseAbility(Tile loc)
+    {
+        toggleAbilityHighlights();
+        Tile currLoc = attachedHero.getCurrentPos();
+        int dX = Mathf.Abs(currLoc.getX() - loc.getX());
+        int dY = Mathf.Abs(currLoc.getY() - loc.getY());
+        if((dX == 1 && dY == 0) || (dX == 0 && dY == 1) || (dX == 1 && dY == 1))
+        {
+            attachedHero.updatePosition(loc);
+            attachedHero.getMapManager().advTurn(cost);
+        }
+        attachedHero.activeAbility = null;
+    }
+
+    public void init()
     {
         cost = 1;
         damage = 0;

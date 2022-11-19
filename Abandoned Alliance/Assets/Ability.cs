@@ -13,14 +13,15 @@ public abstract class Ability : MonoBehaviour
 
     public Hero attachedHero;
 
-    public void toggleActive()
+    public virtual void toggleActive()
     {
         if(remainingCooldown == 0)
         {
             attachedHero.activeAbility = this;
-            Debug.Log("Ability Activated: " + abilityName + ".");
+            toggleAbilityHighlights();
         }
     }
 
-    public abstract void UseAbility(int X, int Y);
+    public abstract void UseAbility(Tile loc);
+    protected abstract void toggleAbilityHighlights();
 }
