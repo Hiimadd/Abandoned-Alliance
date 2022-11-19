@@ -24,7 +24,7 @@ public class MoveAbility : Ability
         Tile currLoc = attachedHero.getCurrentPos();
         int dX = Mathf.Abs(currLoc.getX() - loc.getX());
         int dY = Mathf.Abs(currLoc.getY() - loc.getY());
-        if((dX == 1 && dY == 0) || (dX == 0 && dY == 1) || (dX == 1 && dY == 1) && loc.getHero() == NULL)
+        if(((dX == 1 && dY == 0) || (dX == 0 && dY == 1) || (dX == 1 && dY == 1)) && loc.getHero() == null && loc.getType() == 1)
         {
             attachedHero.updatePosition(loc);
             attachedHero.getMapManager().advTurn(cost);
