@@ -17,6 +17,8 @@ public class MapManager : MonoBehaviour
     [SerializeField] private float startX;
     [SerializeField] private float startY;
     [SerializeField] private List<Vector3> blockedTiles; //X = Column, Y = bottom row to be blocked, Z = top row to be blocked. Should be least-to greatest.
+    private int canUseShortcut = 0;
+    private int canUseShortcutWait = 100;
 
     public void makeGrid()
     {
@@ -127,5 +129,59 @@ public class MapManager : MonoBehaviour
         spawnHeroes();
     }
 
-
+    void Update()
+    {
+        if(canUseShortcut == 0)
+        {
+            if(Input.GetKey("1"))
+            {
+                if(turnOrder[currTurn].transform.Find("Canvas").childCount >= 1)
+                {
+                    Ability temp = turnOrder[currTurn].transform.Find("Canvas").GetChild(0).gameObject.GetComponent(typeof(Ability)) as Ability;
+                    temp.toggleActive();
+                    canUseShortcut = canUseShortcutWait;
+                }
+            }
+            else if(Input.GetKey("2"))
+            {
+                if(turnOrder[currTurn].transform.Find("Canvas").childCount >= 2)
+                {
+                    Ability temp = turnOrder[currTurn].transform.Find("Canvas").GetChild(1).gameObject.GetComponent(typeof(Ability)) as Ability;
+                    temp.toggleActive();
+                    canUseShortcut = canUseShortcutWait;
+                }
+            }
+            else if(Input.GetKey("3"))
+            {
+                if(turnOrder[currTurn].transform.Find("Canvas").childCount >= 3)
+                {
+                    Ability temp = turnOrder[currTurn].transform.Find("Canvas").GetChild(2).gameObject.GetComponent(typeof(Ability)) as Ability;
+                    temp.toggleActive();
+                    canUseShortcut = canUseShortcutWait;
+                }
+            }
+            else if(Input.GetKey("4"))
+            {
+                if(turnOrder[currTurn].transform.Find("Canvas").childCount >= 4)
+                {
+                    Ability temp = turnOrder[currTurn].transform.Find("Canvas").GetChild(3).gameObject.GetComponent(typeof(Ability)) as Ability;
+                    temp.toggleActive();
+                    canUseShortcut = canUseShortcutWait;
+                }
+            }
+            else if(Input.GetKey("5"))
+            {
+                if(turnOrder[currTurn].transform.Find("Canvas").childCount >= 5)
+                {
+                    Ability temp = turnOrder[currTurn].transform.Find("Canvas").GetChild(4).gameObject.GetComponent(typeof(Ability)) as Ability;
+                    temp.toggleActive();
+                    canUseShortcut = canUseShortcutWait;
+                }
+            }
+        }
+        else
+        {
+            --canUseShortcut;
+        }
+    }
 }
