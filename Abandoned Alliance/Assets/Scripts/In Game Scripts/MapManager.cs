@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class MapManager : MonoBehaviour
 {
@@ -10,20 +11,36 @@ public class MapManager : MonoBehaviour
     [SerializeField] private Tile tilePrefab;
     [SerializeField] private MapManager myself;
     [SerializeField] private Hero heroPrefab;
-    private int width = 32;
-    private int height = 32;
+    [SerializeField] private Tilemap fog;
+    [SerializeField] private int width = 32;
+    [SerializeField] private int height = 32;
+    [SerializeField] private float startX;
+    [SerializeField] private float startY;
+    [SerializeField] private List<Vector3> blockedTiles; //X = Column, Y = bottom row to be blocked, Z = top row to be blocked. Should be least-to greatest.
 
     public void makeGrid()
     {
         map = new List<List<Tile>>();
+        int blockedTilesPos = 0;
         for(int i = 0; i < width; ++i)
         {
+            if(blockedTilesPos < blockedTiles.Count)
+            {
+                while(blockedTiles[blockedTilesPos].x < i) {++blockedTilesPos; if(blockedTilesPos >= blockedTiles.Count) {break;}}
+            }
             List<Tile> row = new List<Tile>();
             for(int j = 0; j < height; ++j)
             {
-                Tile spawnedTile = Instantiate(tilePrefab, new Vector3(i, j), Quaternion.identity);
+                Tile spawnedTile = Instantiate(tilePrefab, new Vector3(startX+i, startY+j), Quaternion.identity);
                 spawnedTile.name = $"Tile {i} {j}";
-                spawnedTile.init(1, myself, i, j);
+                if(blockedTilesPos < blockedTiles.Count && blockedTiles[blockedTilesPos].x == i && blockedTiles[blockedTilesPos].y <= j && blockedTiles[blockedTilesPos].z >= j)
+                {
+                    spawnedTile.init(2, myself, i, j);
+                }
+                else
+                {
+                    spawnedTile.init(1, myself, i, j);
+                }
                 row.Add(spawnedTile);
             }
             map.Add(row);
@@ -35,19 +52,16 @@ public class MapManager : MonoBehaviour
         turnOrder = new List<Hero>();
         currTurn = 0;
         Hero hero1 = Instantiate(heroPrefab, new Vector3(0,0), Quaternion.identity);
-        hero1.init(10, 0, 1, 3, 2, 3, map[0][0], this);
+        hero1.init(10, 0, 1, 3, 2, 3, false, map[0][0], this, fog);
         hero1.name = "Knight";
         turnOrder.Add(hero1);
-        map[0][0].setHero(hero1);
         hero1.transform.Find("Canvas").gameObject.SetActive(true);
 
 
         Hero dummy = Instantiate(heroPrefab, new Vector3(5,5), Quaternion.identity);
-        dummy.init(10, 0, 1, 3, 2, 3, map[5][5], this);
-        dummy.isDummy = true;
+        dummy.init(10, 0, 1, 3, 2, 3, true, map[3][3], this, fog);
         dummy.name = "Dummy1";
         turnOrder.Add(dummy);
-        map[5][5].setHero(dummy);
 
     }
 
@@ -84,7 +98,6 @@ public class MapManager : MonoBehaviour
     public void advTurn(int apUsed)
     {
         Hero activeHero = turnOrder[currTurn];
-        Debug.Log(activeHero.name);
         if(activeHero.getAP() == apUsed)
         {
             activeHero.resetAP();
@@ -93,11 +106,11 @@ public class MapManager : MonoBehaviour
             ++currTurn;
             if(currTurn >= turnOrder.Count) {currTurn = 0;}
             int startingPosition = currTurn;
-            while(turnOrder[currTurn].isDummy)
+            while(turnOrder[currTurn].checkIsDummy())
             {
                 if(currTurn >= turnOrder.Count-1) 
                 {
-                    if(turnOrder[currTurn+1].isDummy) {currTurn = 0; continue;}
+                    if(turnOrder[currTurn+1].checkIsDummy()) {currTurn = 0; continue;}
                 }
                 ++currTurn;
                 if(currTurn == startingPosition) {break;} //case where the full list is dummies, shouldn't happen in demo but might when dummies are replaced with enemies

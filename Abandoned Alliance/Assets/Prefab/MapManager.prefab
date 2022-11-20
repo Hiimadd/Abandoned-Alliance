@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4510723194942297431}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.14741862, y: 0.07451616, z: -1824.8608}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -46,3 +46,6 @@ MonoBehaviour:
   tilePrefab: {fileID: 3069235704206801308, guid: 427537a166ce06849b95e08e65a4b7af, type: 3}
   myself: {fileID: 4510723194942297430}
   heroPrefab: {fileID: 1781608586911464113, guid: 4f17b8a324ef1de49b974465b6ba131e, type: 3}
+  width: 32
+  height: 32
+  blockedTiles: []

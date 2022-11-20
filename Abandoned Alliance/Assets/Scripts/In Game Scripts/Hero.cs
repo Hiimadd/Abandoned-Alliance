@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Hero : MonoBehaviour
 {
     public Ability activeAbility;
     private MapManager mapManager;
-    public bool isDummy;
+    private bool isDummy;
     private int maxHealth;
     private int currHealth;
     private int defense;
@@ -16,6 +17,7 @@ public class Hero : MonoBehaviour
     private int damage;
     private int sightRange;
     private Tile currLoc;
+    private Tilemap fog;
 
     //Pass in the amount the health should change by, positive = increase in health, negative = decrease in health
 
@@ -25,6 +27,7 @@ public class Hero : MonoBehaviour
         transform.position = loc.transform.position;
         currLoc = loc;
         loc.setHero(this);
+        if(!isDummy) {FogUpdate();}
     }
 
     public Tile getCurrentPos() {return currLoc;}
@@ -50,9 +53,11 @@ public class Hero : MonoBehaviour
 
     public int getDamage() {return damage;}
 
+    public bool checkIsDummy() {return isDummy;}
+
     public MapManager getMapManager() {return mapManager;}
 
-    public void init(int Health,int Defense,int MoveSpeed,int ActionPoints,int Damage,int SightRange, Tile loc, MapManager mm)
+    public void init(int Health,int Defense,int MoveSpeed,int ActionPoints,int Damage,int SightRange, bool dummy, Tile loc, MapManager mm, Tilemap tm)
     {
         maxHealth = currHealth = Health;
         defense = Defense;
@@ -60,8 +65,22 @@ public class Hero : MonoBehaviour
         maxActionPoints = currActionPoints = ActionPoints;
         damage = Damage;
         sightRange = SightRange;
-        updatePosition(loc);
+        isDummy = dummy;
         mapManager = mm;
-        isDummy = false;
+        fog = tm;
+        updatePosition(loc);
+        
+    }
+
+    private void FogUpdate()
+    {
+        Vector3Int currPlayerPos = fog.WorldToCell(transform.position); // cell position convert to world position
+        for(int i = -sightRange; i <= sightRange; i++)
+        {
+            for (int j = -sightRange; j <= sightRange; j++)
+            {
+                fog.SetTile(currPlayerPos + new Vector3Int(i, j, 0), null);// remove tile surround the player
+            }
+        }
     }
 }

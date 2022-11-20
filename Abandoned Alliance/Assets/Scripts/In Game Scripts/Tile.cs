@@ -51,22 +51,31 @@ public class Tile : MonoBehaviour
         {
             defaultColor = transparent;
         }
-        Renderer.color = defaultColor;
+        if(tileType == 1)
+        {
+            Renderer.color = defaultColor;
+        }
     }
 
     void OnMouseEnter()
     {
-        Renderer.color = highlight;
+        if(tileType == 1)
+        {
+            Renderer.color = highlight;
+        }
     }
 
     void OnMouseExit()
     {
-
-        Renderer.color = defaultColor;
+        if(tileType == 1)
+        {
+            Renderer.color = defaultColor;
+        }
     }
 
     void OnMouseDown()
     {
+        //Debug.Log($"X: {X}, Y: {Y}");
         mapManager.triggerAbility(this);
     }
 }
