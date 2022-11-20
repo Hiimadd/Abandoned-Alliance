@@ -17,8 +17,8 @@ public class MapManager : MonoBehaviour
     [SerializeField] private float startX;
     [SerializeField] private float startY;
     [SerializeField] private List<Vector3> blockedTiles; //X = Column, Y = bottom row to be blocked, Z = top row to be blocked. Should be least-to greatest.
-    private int canUseShortcut = 0;
-    private int canUseShortcutWait = 100;
+    private double canUseShortcut = 0;
+    private double canUseShortcutWait = 0.25;
 
     public void makeGrid()
     {
@@ -131,7 +131,7 @@ public class MapManager : MonoBehaviour
 
     void Update()
     {
-        if(canUseShortcut == 0)
+        if(canUseShortcut <= 0)
         {
             if(Input.GetKey("1"))
             {
@@ -181,7 +181,7 @@ public class MapManager : MonoBehaviour
         }
         else
         {
-            --canUseShortcut;
+            canUseShortcut -= Time.deltaTime;
         }
     }
 }
