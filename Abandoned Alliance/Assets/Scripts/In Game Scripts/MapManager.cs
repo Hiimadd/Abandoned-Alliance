@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,21 @@ using UnityEngine.Tilemaps;
 
 public class MapManager : MonoBehaviour
 {
+    [Serializable]
+    public struct HeroArgs
+    {
+        public int Health;
+        public int Defense;
+        public int MoveSpeed;
+        public int ActionPoints;
+        public int Damage;
+        public int SightRange;
+        public bool dummy;
+        public Vector2Int startPos;
+        public int heroType;
+    }
+
+
     List<List<Tile>> map;
     List<Hero> turnOrder;
     int currTurn;
@@ -17,6 +33,7 @@ public class MapManager : MonoBehaviour
     [SerializeField] private float startX;
     [SerializeField] private float startY;
     [SerializeField] private List<Vector3> blockedTiles; //X = Column, Y = bottom row to be blocked, Z = top row to be blocked. Should be least-to greatest.
+    [SerializeField] private List<HeroArgs> toSpawn;
     private double canUseShortcut = 0;
     private double canUseShortcutWait = 0.25;
 
@@ -53,7 +70,51 @@ public class MapManager : MonoBehaviour
     {
         turnOrder = new List<Hero>();
         currTurn = 0;
-        Hero hero1 = Instantiate(heroPrefab, new Vector3(0,0), Quaternion.identity);
+        bool firstPlayer = true;
+        for(int i = 0; i < toSpawn.Count; ++i)
+        {
+            Hero h = Instantiate(heroPrefab, new Vector3(0,0), Quaternion.identity);
+            HeroArgs a = toSpawn[i];
+            h.init(a.Health, a.Defense, a.MoveSpeed, a.ActionPoints, a.Damage, a.SightRange, a.dummy, map[a.startPos.x][a.startPos.y], this, fog);
+            turnOrder.Add(h);
+            switch(a.heroType)
+            {
+                case 1: //knight
+                    h.transform.Find("KnightSprite").gameObject.SetActive(true);
+                    h.transform.Find("KnightSprite").gameObject.name = "Sprite";
+                    h.transform.Find("KnightCanvas").gameObject.name = "Canvas";
+                break;
+                case 2: //wizard
+                    h.transform.Find("WizardSprite").gameObject.SetActive(true);
+                    h.transform.Find("WizardSprite").gameObject.name = "Sprite";
+                    h.transform.Find("WizardCanvas").gameObject.name = "Canvas";
+                break;
+                case 3: //ranger
+                    h.transform.Find("RangerSprite").gameObject.SetActive(true);
+                    h.transform.Find("RangerSprite").gameObject.name = "Sprite";
+                    h.transform.Find("RangerCanvas").gameObject.name = "Canvas";
+                break;
+                default: //monster
+                    h.transform.Find("MonsterSprite").gameObject.SetActive(true);
+                    h.transform.Find("MonsterSprite").gameObject.name = "Sprite";
+                break;
+            }
+            if(!a.dummy)
+            {
+                foreach(Transform t in h.transform.Find("Canvas"))
+                {
+                    Ability toInit = t.gameObject.GetComponent(typeof(Ability)) as Ability;
+                    toInit.init();
+                }
+
+                if(firstPlayer)
+                {
+                    h.transform.Find("Canvas").gameObject.SetActive(true);
+                    firstPlayer = false;
+                }
+            }
+        }
+        /*Hero hero1 = Instantiate(heroPrefab, new Vector3(0,0), Quaternion.identity);
         hero1.init(10, 0, 1, 3, 2, 3, false, map[0][0], this, fog);
         hero1.name = "Knight";
         turnOrder.Add(hero1);
@@ -63,7 +124,7 @@ public class MapManager : MonoBehaviour
         Hero dummy = Instantiate(heroPrefab, new Vector3(5,5), Quaternion.identity);
         dummy.init(10, 0, 1, 3, 2, 3, true, map[3][3], this, fog);
         dummy.name = "Dummy1";
-        turnOrder.Add(dummy);
+        turnOrder.Add(dummy);*/
 
     }
 
@@ -92,6 +153,7 @@ public class MapManager : MonoBehaviour
         }
         else
         {
+            for(int i = 0; i < currTurn; ++i) {if(turnOrder[i] == hero) {--currTurn; break;}}
             turnOrder.Remove(hero);
         }
         Destroy(hero.gameObject);
@@ -104,13 +166,12 @@ public class MapManager : MonoBehaviour
         {
             activeHero.resetAP();
             activeHero.transform.Find("Canvas").gameObject.SetActive(false);
-
             ++currTurn;
-            if(currTurn >= turnOrder.Count) {currTurn = 0;}
+            if(currTurn >= turnOrder.Count-1) {currTurn = 0;}
             int startingPosition = currTurn;
             while(turnOrder[currTurn].checkIsDummy())
             {
-                if(currTurn >= turnOrder.Count-1) 
+                if(currTurn >= turnOrder.Count-2) 
                 {
                     if(turnOrder[currTurn+1].checkIsDummy()) {currTurn = 0; continue;}
                 }

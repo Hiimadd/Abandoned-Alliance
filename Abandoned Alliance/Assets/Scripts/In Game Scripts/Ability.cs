@@ -17,6 +17,7 @@ public abstract class Ability : MonoBehaviour
     {
         if(remainingCooldown == 0)
         {
+            if(attachedHero.activeAbility != null) {attachedHero.activeAbility.toggleAbilityHighlights();}
             attachedHero.activeAbility = this;
             toggleAbilityHighlights();
         }
@@ -24,4 +25,5 @@ public abstract class Ability : MonoBehaviour
 
     public abstract void UseAbility(Tile loc);
     protected abstract void toggleAbilityHighlights();
+    public abstract void init();
 }

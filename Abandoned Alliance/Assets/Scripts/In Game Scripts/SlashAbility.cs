@@ -32,7 +32,7 @@ public class SlashAbility : Ability
         attachedHero.activeAbility = null;
     }
 
-    public void init()
+    public override void init()
     {
         cost = 1;
         damage = attachedHero.getDamage();
