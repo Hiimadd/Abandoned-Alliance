@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/CharacterTesting.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: e0a6c1991fc8a5c40a619e416fb4720e
   - enabled: 1
@@ -17,12 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Settings.unity
     guid: 74708eb768846c64b9bdd77a52bb4142
-  - enabled: 1
-    path: Assets/Scenes/MapTesting.unity
-    guid: dc6282e5f1e7a4446833140c4de1ad74
-  - enabled: 1
-    path: Assets/Scenes/Map2.unity
-    guid: 5c620c79bd6d6c04dade54c510946660
   - enabled: 1
     path: Assets/Scenes/TutorialMap.unity
     guid: 98a296dc8e4822e4aaabb8135bf32d31

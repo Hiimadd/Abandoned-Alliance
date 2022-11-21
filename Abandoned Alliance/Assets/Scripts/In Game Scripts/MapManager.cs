@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.SceneManagement;
 
 public class MapManager : MonoBehaviour
 {
@@ -159,6 +160,16 @@ public class MapManager : MonoBehaviour
 
     public void killHero(Hero hero)
     {
+        if(hero.checkIsDummy() == false)
+        {
+            int playerUnitCount = 0;
+            for(int i = 0; i < turnOrder.Count; ++i)
+            {
+                if(turnOrder[i].checkIsDummy() == false) {++playerUnitCount; if(playerUnitCount == 2) {break;}}
+            }
+            if(playerUnitCount == 1) {SceneManager.LoadScene("Lobby");}
+        }
+
         if(turnOrder[currTurn] == hero) //unit manages to kill itself
         {
             advTurn(hero.getAP());
@@ -184,17 +195,37 @@ public class MapManager : MonoBehaviour
             int startingPosition = currTurn;
             while(turnOrder[currTurn].checkIsDummy())
             {
+                dummyAttack(currTurn);
                 if(currTurn >= turnOrder.Count-2) 
                 {
-                    if(turnOrder[currTurn+1].checkIsDummy()) {currTurn = 0; continue;}
+                    if(turnOrder[currTurn+1].checkIsDummy()) {dummyAttack(currTurn+1); currTurn = 0; continue;}
                 }
                 ++currTurn;
                 if(currTurn == startingPosition) {break;} //case where the full list is dummies, shouldn't happen in demo but might when dummies are replaced with enemies
             }
-
+            if(currTurn == startingPosition && turnOrder[currTurn].checkIsDummy()) {return;}
             turnOrder[currTurn].transform.Find("Canvas").gameObject.SetActive(true);
         }
         else {activeHero.useAP(apUsed);}
+    }
+
+    private void dummyAttack(int turn)
+    {
+        Hero currDummy = turnOrder[turn];
+        Tile currPos = currDummy.getCurrentPos();
+        for(int i = -1; i < 2; ++i)
+        {
+            for(int j = -1; j < 2; ++j)
+            {
+                if(j == 0 && i == 0) {continue;}
+                Tile check = getPos(currPos.getX() + i, currPos.getY() + j);
+                if(check != null && check.getHero() != null && check.getHero().checkIsDummy() == false)
+                {
+                    check.getHero().changeHealth(-1*currDummy.getDamage());
+                    break;
+                }
+            }
+        }
     }
 
     void Start()
