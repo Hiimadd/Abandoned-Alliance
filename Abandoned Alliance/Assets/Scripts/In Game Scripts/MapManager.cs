@@ -128,6 +128,19 @@ public class MapManager : MonoBehaviour
 
     }
 
+    public void mouseHighlight(int X, int Y)
+    {
+        Hero activeHero = turnOrder[currTurn];
+        if(activeHero.activeAbility == null)
+        {
+            map[X][Y].toggleMouseHighlight();
+        }
+        else
+        {
+            map[X][Y].toggleMouseHighlight();
+        }
+    }
+
     public void triggerAbility(Tile loc)
     {
         Hero activeHero = turnOrder[currTurn];
@@ -192,6 +205,11 @@ public class MapManager : MonoBehaviour
 
     void Update()
     {
+        if(turnOrder[currTurn] == map[10][9].getHero())
+        {
+            Application.Quit();
+    	    UnityEditor.EditorApplication.isPlaying = false; // Editor version
+        }
         if(canUseShortcut <= 0)
         {
             if(Input.GetKey("1"))

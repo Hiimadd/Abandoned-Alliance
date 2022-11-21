@@ -67,11 +67,23 @@ public class Tile : MonoBehaviour
         Renderer.color = defaultColor;
     }
 
+    public void toggleMouseHighlight()
+    {
+        if(Renderer.color == highlight)
+        {
+            Renderer.color = defaultColor;
+        }
+        else
+        {
+            Renderer.color = highlight;
+        }
+    }
+
     void OnMouseEnter()
     {
         if(tileType == 1)
         {
-            Renderer.color = highlight;
+            mapManager.mouseHighlight(X, Y);
         }
     }
 
