@@ -1700,7 +1700,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4510723194942297430, guid: f38315302fac5884280bb61c93043ee6, type: 3}
       propertyPath: blockedTiles.Array.data[6].z
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4510723194942297430, guid: f38315302fac5884280bb61c93043ee6, type: 3}
       propertyPath: blockedTiles.Array.data[7].x

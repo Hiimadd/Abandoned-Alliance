@@ -208,7 +208,7 @@ public class MapManager : MonoBehaviour
         if(turnOrder[currTurn] == map[10][9].getHero())
         {
             Application.Quit();
-    	    UnityEditor.EditorApplication.isPlaying = false; // Editor version
+    	    //UnityEditor.EditorApplication.isPlaying = false; // Editor version
         }
         if(canUseShortcut <= 0)
         {

@@ -23,6 +23,6 @@ public class ButtonBehavior : MonoBehaviour
     public void QuitGame()
     {
     	Application.Quit();
-    	UnityEditor.EditorApplication.isPlaying = false; // Editor version
+    	//UnityEditor.EditorApplication.isPlaying = false; // Editor version
     }
 }
