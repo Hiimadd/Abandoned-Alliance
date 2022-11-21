@@ -13,7 +13,17 @@ public class SlashAbility : Ability
                 {
                     if(j == 0 && i == 0) {continue;}
                     Tile toHighlight = attachedHero.getMapManager().getPos(currLoc.getX() + i, currLoc.getY() +j);
-                    if(toHighlight != null) {toHighlight.toggleAbilityHighlight();}
+                    if(toHighlight != null) 
+                    {
+                        if(toHighlight.getHero() != null && toHighlight.getType() == 1)
+                        {
+                            toHighlight.toggleAbilityHighlight();
+                        }
+                        else
+                        {
+                            toHighlight.toggleInvalidAbilityHighlight();
+                        }
+                    }
                 }
             }
     }

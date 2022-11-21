@@ -98,7 +98,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transparent: {r: 1, g: 1, b: 1, a: 0}
   highlight: {r: 1, g: 1, b: 1, a: 0.3529412}
-  abilityHighlight: {r: 1, g: 1, b: 1, a: 0.1764706}
+  abilityHighlight: {r: 1, g: 1, b: 1, a: 0.19607843}
+  invalidAbilityHighlight: {r: 1, g: 1, b: 1, a: 0.08627451}
   Renderer: {fileID: 3069235704206801309}
 --- !u!61 &-8157624376997324081
 BoxCollider2D:

@@ -9,7 +9,7 @@ public class Tile : MonoBehaviour
     private MapManager mapManager;
     private int X;
     private int Y;
-    [SerializeField] private Color transparent, highlight, abilityHighlight;
+    [SerializeField] private Color transparent, highlight, abilityHighlight, invalidAbilityHighlight;
     [SerializeField] private SpriteRenderer Renderer;
     private Color defaultColor;
 
@@ -43,7 +43,7 @@ public class Tile : MonoBehaviour
 
     public void toggleAbilityHighlight()
     {
-        if(defaultColor == transparent)
+        if(defaultColor != abilityHighlight)
         {
             defaultColor = abilityHighlight;
         }
@@ -51,10 +51,20 @@ public class Tile : MonoBehaviour
         {
             defaultColor = transparent;
         }
-        if(tileType == 1)
+        Renderer.color = defaultColor;
+    }
+
+    public void toggleInvalidAbilityHighlight()
+    {
+        if(defaultColor != invalidAbilityHighlight)
         {
-            Renderer.color = defaultColor;
+            defaultColor = invalidAbilityHighlight;
         }
+        else
+        {
+            defaultColor = transparent;
+        }
+        Renderer.color = defaultColor;
     }
 
     void OnMouseEnter()
