@@ -22,8 +22,8 @@ public class MapManager : MonoBehaviour
 
 
     List<List<Tile>> map;
-    List<Hero> turnOrder;
-    int currTurn;
+    public List<Hero> turnOrder;
+    public int currTurn;
     [SerializeField] private Tile tilePrefab;
     [SerializeField] private MapManager myself;
     [SerializeField] private Hero heroPrefab;

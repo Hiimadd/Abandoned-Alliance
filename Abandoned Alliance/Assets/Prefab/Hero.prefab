@@ -763,7 +763,7 @@ GameObject:
   - component: {fileID: 1781608588551044220}
   m_Layer: 5
   m_Name: KnightCanvas
-  m_TagString: Untagged
+  m_TagString: HidePaused
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1784,7 +1784,7 @@ GameObject:
   - component: {fileID: 7900716153722482517}
   m_Layer: 5
   m_Name: RangerCanvas
-  m_TagString: Untagged
+  m_TagString: HidePaused
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1885,7 +1885,7 @@ GameObject:
   - component: {fileID: 6234980081935541895}
   m_Layer: 5
   m_Name: WizardCanvas
-  m_TagString: Untagged
+  m_TagString: HidePaused
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
