@@ -34,6 +34,8 @@ public class Hero : MonoBehaviour
 
     public int getHealth() {return currHealth;}
 
+    public int getMaxHealth() {return maxHealth;}
+
     public void changeHealth(int change)
     {
         currHealth += change;
