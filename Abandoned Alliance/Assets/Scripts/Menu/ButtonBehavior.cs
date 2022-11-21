@@ -6,19 +6,11 @@ using UnityEngine.UI;
 
 public class ButtonBehavior : MonoBehaviour
 {
-	public string mapName;
-	private Dropdown mapDrop;
 	
     // Start is called before the first frame update
     void Start()
     {
-        mapName = "Map1";
-        mapDrop = GameObject.Find("Dropdown").GetComponent<Dropdown>();
-    }
-    
-    public void SetMap()
-    {
-    	mapName = mapDrop.options[mapDrop.value].text;
+        
     }
     
     // Scene changer
