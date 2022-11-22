@@ -2,8 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//NOTE: This entire ability is WIP and not implemented yet.
+//It is the first AOE-style attack and is not fully functional.
 public class SweepAbility : Ability
 {
+    //functions identically to SlashAbility, as it has the same range and target parameters.
     protected override void toggleAbilityHighlights()
     {
         Tile currLoc = attachedHero.getCurrentPos();
@@ -28,6 +32,7 @@ public class SweepAbility : Ability
             }
     }
 
+    //Not yet implemented. Placeholder code from SlashAbility.
     public override void UseAbility(Tile loc)
     {
         toggleAbilityHighlights();
@@ -42,6 +47,8 @@ public class SweepAbility : Ability
         attachedHero.activeAbility = null;
     }
 
+    //WIP mouseOver logic to enable highlighting area-of-effect for selecting a certain tile.
+    //In this case, it's the tile clicked and the two tiles in range touching it.
     public override void mouseOver(Tile loc)
     {
         loc.toggleMouseHighlight();
@@ -77,12 +84,14 @@ public class SweepAbility : Ability
         }
     }
 
+    //Paramaters still need to be tuned,
+    //Should have a cooldown and higher AP cost than slash.
     public override void init()
     {
         cost = 1;
         damage = attachedHero.getDamage();
         range = 1;
         cooldown = 0;
-        abilityName = "Slash";
+        abilityName = "Sweep";
     }
 }
