@@ -5992,7 +5992,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2044561128
 Transform:
   m_ObjectHideFlags: 0
@@ -9768,7 +9768,7 @@ GameObject:
   - component: {fileID: 2123782405}
   - component: {fileID: 2123782404}
   - component: {fileID: 2123782403}
-  - component: {fileID: 2123782406}
+  - component: {fileID: 2123782407}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -9841,7 +9841,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2123782406
+--- !u!114 &2123782407
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9850,11 +9850,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2123782402}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6cb56474068b6e409953c7daaab411c, type: 3}
+  m_Script: {fileID: 11500000, guid: f0d51bb28335b4a43bccf7197a6fcbe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 2123782404}
   mapRenderer: {fileID: 1047138227}
+  cam: {fileID: 2123782404}
+  panSpeed: 20
+  panBorderThickness: 10
 --- !u!1001 &5885214464930823434
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9961,6 +9963,10 @@ PrefabInstance:
     - target: {fileID: 5885214465141738351, guid: 3c357db9bada87245bfb1adcc08b281e, type: 3}
       propertyPath: m_Name
       value: PauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5885214465141738351, guid: 3c357db9bada87245bfb1adcc08b281e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c357db9bada87245bfb1adcc08b281e, type: 3}
