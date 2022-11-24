@@ -7,6 +7,9 @@ using UnityEngine.SceneManagement;
 
 public class MapManager : MonoBehaviour
 {
+    //Struct of properties required to define a Hero object.
+    //Used in combination with a list to be able to spawn many situations with the same MapManager script,
+    //only changing the set of Heroes that are passed in.
     [Serializable]
     public struct HeroArgs
     {
@@ -34,10 +37,14 @@ public class MapManager : MonoBehaviour
     [SerializeField] private float startX;
     [SerializeField] private float startY;
     [SerializeField] private List<Vector3> blockedTiles; //X = Column, Y = bottom row to be blocked, Z = top row to be blocked. Should be least-to greatest.
-    [SerializeField] private List<HeroArgs> toSpawn;
+    [SerializeField] private List<HeroArgs> toSpawn; //List of Heroes to be spawned on the map
     private double canUseShortcut = 0;
     private double canUseShortcutWait = 0.25;
 
+    //Generate the set of tiles needed to overlay the TileMap with interactable/highlightable squares
+    //Takes advantage of startX and startY to align with maps that don't have the first tile at 0,0
+    //Uses width and height to create any rectangular board
+    //Additionally checks blockedTiles to see which tiles should be marked as non-walkable.
     public void makeGrid()
     {
         map = new List<List<Tile>>();
@@ -67,6 +74,9 @@ public class MapManager : MonoBehaviour
         }
     }
 
+    //Uses toSpawn to generate all player and non-player units on the map.
+    //Locates the first Player unit's UI to enable it, and does the other basic configuration steps required to
+    //define each unit as a unique element from health to posiiton to player/ai status.
     public void spawnHeroes()
     {
         turnOrder = new List<Hero>();
@@ -129,6 +139,8 @@ public class MapManager : MonoBehaviour
 
     }
 
+    //Another part of the more advanced mouse highlight system intended to be used to allow AOE attacks to highlight their effect radius.
+    //Currently each conditional goes to this default behavior as AOE attacks haven't been implemented and for the sake of variable isolation, this should be kept simple until then.
     public void mouseHighlight(int X, int Y)
     {
         Hero activeHero = turnOrder[currTurn];
@@ -142,6 +154,8 @@ public class MapManager : MonoBehaviour
         }
     }
 
+    //Called with a specific tile to indicate the current Hero should try to use their ability there.
+    //The effect this has is completely determined by that activeAbility, and this is usually called by a tile passing "this" after a user clicks on it.
     public void triggerAbility(Tile loc)
     {
         Hero activeHero = turnOrder[currTurn];
@@ -149,6 +163,8 @@ public class MapManager : MonoBehaviour
         activeHero.activeAbility.UseAbility(loc);
     }
 
+    //Checks an X,Y position to see if it is within the generated tilemap. If it is, returns the associated tile.
+    //If it is not, returns null.
     public Tile getPos(int x, int y)
     {
         if(x > -1 && x < width && y > -1 && y < height)
@@ -158,6 +174,10 @@ public class MapManager : MonoBehaviour
         return null;
     }
 
+    //Called when a Hero's health passes 0.
+    //Includes check for the unit being the last player unit (ejects to Lobby for now),
+    //Checking for if the unit manages to hit and destroy itself,
+    //and checking for if the removal of this unit changes turnOrder[currTurn]'s (AKA activeHero/the Unit who is currently acting) position in the list.
     public void killHero(Hero hero)
     {
         if(hero.checkIsDummy() == false)
@@ -183,10 +203,13 @@ public class MapManager : MonoBehaviour
         Destroy(hero.gameObject);
     }
 
+    //Contains the complete set of logic for advancing to the next Player turn.
+    //Will expand in the future to call AI Hero logic as needed, but for now just calls dummyAttack for the dummy units to attack a player unit within range.
+    //It only actually advances to the next turn if the ability takes the unit to 0 AP. Otherwise just subtracts AP from the unit.
     public void advTurn(int apUsed)
     {
         Hero activeHero = turnOrder[currTurn];
-        if(activeHero.getAP() == apUsed)
+        if(activeHero.getAP() <= apUsed)
         {
             activeHero.resetAP();
             activeHero.transform.Find("Canvas").gameObject.SetActive(false);
@@ -209,6 +232,8 @@ public class MapManager : MonoBehaviour
         else {activeHero.useAP(apUsed);}
     }
 
+    //Functionally a placeholder for more advanced AI scripts that will be contained within the Hero class, or a class that inherits Hero,
+    //This method simply takes a dummy and attempts to attack any non-dummy units within its one-tile range.
     private void dummyAttack(int turn)
     {
         Hero currDummy = turnOrder[turn];
@@ -228,14 +253,19 @@ public class MapManager : MonoBehaviour
         }
     }
 
+    //Called on scene load. Used to execute the two functions that initialize the entire map.
     void Start()
     {
         makeGrid();
         spawnHeroes();
     }
 
+    //Called every frame.
+    //Primarily used as keybind detection for shortcuts for Player abilities.
     void Update()
     {
+        //This if was created specificaly for our Beta release to create a hidden area with an "easter egg" of force-quitting the application if
+        //the users found a hidden area that seems like it should be non-traversable.
         if(turnOrder[currTurn] == map[10][9].getHero())
         {
             Application.Quit();

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MoveAbility : Ability
 {
+    //Implementation of toggleAbilityHighlights for MoveAbility.
+    //Checks to make sure the tiles are on the grid, of type 1 (walkable), and aren't already occupied.
     protected override void toggleAbilityHighlights()
     {
         Tile currLoc = attachedHero.getCurrentPos();
@@ -28,6 +30,9 @@ public class MoveAbility : Ability
             }
     }
 
+    //Implementation of useAbility for MoveAbility.
+    //Checks distance of clicked tile from the Hero's current position, and moves
+    //if the tile has a distance of 1, is open, and is walkable.
     public override void UseAbility(Tile loc)
     {
         toggleAbilityHighlights();
@@ -42,6 +47,9 @@ public class MoveAbility : Ability
         attachedHero.activeAbility = null;
     }
 
+    //Implementation of init for MoveAbility.
+    //Just initializes the variables of the ability, not much to explain here.
+    //Worth pointing out that range is currently unused for MoveAbility.
     public override void init()
     {
         cost = 1;

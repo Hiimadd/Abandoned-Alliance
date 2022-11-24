@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SlashAbility : Ability
 {
+    //Implementation of toggleAbilityHighlights for SlashAbility.
+    //Checks to make sure that the tile is occupied and walkable, as a unit shouldn't be able to strike at a target they can't be on the same level as.
+    //(For example, there could be archers on unwalkable tiles to simulate being on elevated terrain, in which case a sword wouldn't be able to reach them.)
     protected override void toggleAbilityHighlights()
     {
         Tile currLoc = attachedHero.getCurrentPos();
@@ -28,6 +31,9 @@ public class SlashAbility : Ability
             }
     }
 
+    //Implementation of useAbility for SlashAbility.
+    //Checks to make sure the attack is in range (distance 1 from the Hero)
+    //And that there is actually a unit at the clicked tile to make sure the ability can't attack empty space.
     public override void UseAbility(Tile loc)
     {
         toggleAbilityHighlights();
@@ -42,6 +48,9 @@ public class SlashAbility : Ability
         attachedHero.activeAbility = null;
     }
 
+    //Implementation of init for SlashAbility.
+    //Slash, as a basic attack, has a cost of 1 and a range of 1, to differentiate it from more specialized abilities
+    //that may have greater range or damage at the expense of a higher AP cost or a longer cooldown.
     public override void init()
     {
         cost = 1;
