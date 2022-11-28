@@ -11422,6 +11422,14 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4510723194942297430, guid: f38315302fac5884280bb61c93043ee6, type: 3}
+      propertyPath: objective.exitLoc.x
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510723194942297430, guid: f38315302fac5884280bb61c93043ee6, type: 3}
+      propertyPath: objective.exitLoc.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510723194942297430, guid: f38315302fac5884280bb61c93043ee6, type: 3}
       propertyPath: blockedTiles.Array.size
       value: 11
       objectReference: {fileID: 0}

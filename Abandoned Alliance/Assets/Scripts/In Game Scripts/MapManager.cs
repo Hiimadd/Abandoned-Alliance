@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MapManager : MonoBehaviour
 {
@@ -24,6 +25,13 @@ public class MapManager : MonoBehaviour
         public int heroType;
     }
 
+    [Serializable]
+    public struct Objective
+    {
+        public Vector2Int exitLoc;
+        public bool needClearLevel;
+    }
+
 
     List<List<Tile>> map;
     public List<Hero> turnOrder;
@@ -38,6 +46,7 @@ public class MapManager : MonoBehaviour
     [SerializeField] private float startY;
     [SerializeField] private List<Vector3> blockedTiles; //X = Column, Y = bottom row to be blocked, Z = top row to be blocked. Should be least-to greatest.
     [SerializeField] private List<HeroArgs> toSpawn; //List of Heroes to be spawned on the map
+    [SerializeField] private Objective objective;
     private double canUseShortcut = 0;
     private double canUseShortcutWait = 0.25;
 
@@ -268,17 +277,32 @@ public class MapManager : MonoBehaviour
         spawnHeroes();
     }
 
+
+    void checkObj()
+    {
+        if(transform.Find("victoryCanvas").gameObject.activeSelf == false && turnOrder[currTurn] == map[objective.exitLoc.x][objective.exitLoc.y].getHero())
+        {
+            if(objective.needClearLevel)
+            {
+                foreach (Hero h in turnOrder)
+                {
+                    if(h.checkIsDummy()) {return;}
+                }
+            }
+            
+            transform.Find("victoryCanvas").gameObject.SetActive(true);
+    	    //UnityEditor.EditorApplication.isPlaying = false; // Editor version
+        }
+    }
+
     //Called every frame.
     //Primarily used as keybind detection for shortcuts for Player abilities.
     void Update()
     {
+        checkObj();
         //This if was created specificaly for our Beta release to create a hidden area with an "easter egg" of force-quitting the application if
         //the users found a hidden area that seems like it should be non-traversable.
-        if(turnOrder[currTurn] == map[10][9].getHero())
-        {
-            Application.Quit();
-    	    //UnityEditor.EditorApplication.isPlaying = false; // Editor version
-        }
+        
         if(canUseShortcut <= 0)
         {
             if(Input.GetKey("1"))
