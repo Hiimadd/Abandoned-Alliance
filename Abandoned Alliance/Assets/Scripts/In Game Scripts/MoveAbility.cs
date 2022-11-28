@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MoveAbility : Ability
 {
@@ -33,8 +34,9 @@ public class MoveAbility : Ability
     //Implementation of useAbility for MoveAbility.
     //Checks distance of clicked tile from the Hero's current position, and moves
     //if the tile has a distance of 1, is open, and is walkable.
-    public override void UseAbility(Tile loc)
+    public override bool UseAbility(Tile loc)
     {
+        bool used = false;
         toggleAbilityHighlights();
         Tile currLoc = attachedHero.getCurrentPos();
         int dX = Mathf.Abs(currLoc.getX() - loc.getX());
@@ -43,8 +45,10 @@ public class MoveAbility : Ability
         {
             attachedHero.updatePosition(loc);
             attachedHero.getMapManager().advTurn(cost);
+            used = true;
         }
         attachedHero.activeAbility = null;
+        return used;
     }
 
     //Implementation of init for MoveAbility.
@@ -57,6 +61,7 @@ public class MoveAbility : Ability
         range = attachedHero.getMoveSpeed();
         cooldown = 0;
         abilityName = "Move";
+        transform.GetChild(0).gameObject.GetComponent<Text>().text = $"{abilityName}- {cost} AP to use.";
     }
 
 }

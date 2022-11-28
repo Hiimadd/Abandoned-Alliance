@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SlashAbility : Ability
 {
@@ -34,8 +35,9 @@ public class SlashAbility : Ability
     //Implementation of useAbility for SlashAbility.
     //Checks to make sure the attack is in range (distance 1 from the Hero)
     //And that there is actually a unit at the clicked tile to make sure the ability can't attack empty space.
-    public override void UseAbility(Tile loc)
+    public override bool UseAbility(Tile loc)
     {
+        bool used = false;
         toggleAbilityHighlights();
         Tile currLoc = attachedHero.getCurrentPos();
         float dX = Mathf.Abs(currLoc.getX() - loc.getX());
@@ -44,8 +46,10 @@ public class SlashAbility : Ability
         {
             loc.getHero().changeHealth(-1*attachedHero.getDamage());
             attachedHero.getMapManager().advTurn(cost);
+            used = true;
         }
         attachedHero.activeAbility = null;
+        return used;
     }
 
     //Implementation of init for SlashAbility.
@@ -58,5 +62,6 @@ public class SlashAbility : Ability
         range = 1;
         cooldown = 0;
         abilityName = "Slash";
+        transform.GetChild(0).gameObject.GetComponent<Text>().text = $"{abilityName}- {cost} AP to use.";
     }
 }

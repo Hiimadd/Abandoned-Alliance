@@ -80,15 +80,15 @@ public class Tile : MonoBehaviour
 
     //Part of a more complex mouseover highlight system that simply highlights the tile the user is hovering over normally,
     //But should also show the effect radius of an area attack once those are implemented correctly.
-    public void toggleMouseHighlight()
+    public void toggleMouseHighlight(bool shouldHighlight)
     {
-        if(Renderer.color == highlight)
+        if(shouldHighlight)
         {
-            Renderer.color = defaultColor;
+            Renderer.color = highlight;
         }
         else
         {
-            Renderer.color = highlight;
+            Renderer.color = defaultColor;
         }
     }
 
@@ -97,7 +97,7 @@ public class Tile : MonoBehaviour
     {
         if(tileType == 1)
         {
-            mapManager.mouseHighlight(X, Y);
+            mapManager.mouseHighlight(X, Y, true);
         }
     }
 
@@ -106,7 +106,7 @@ public class Tile : MonoBehaviour
     {
         if(tileType == 1)
         {
-            Renderer.color = defaultColor;
+            mapManager.mouseHighlight(X, Y, false);
         }
     }
 

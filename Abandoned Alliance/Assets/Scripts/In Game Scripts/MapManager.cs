@@ -141,16 +141,16 @@ public class MapManager : MonoBehaviour
 
     //Another part of the more advanced mouse highlight system intended to be used to allow AOE attacks to highlight their effect radius.
     //Currently each conditional goes to this default behavior as AOE attacks haven't been implemented and for the sake of variable isolation, this should be kept simple until then.
-    public void mouseHighlight(int X, int Y)
+    public void mouseHighlight(int X, int Y, bool addHighlight)
     {
         Hero activeHero = turnOrder[currTurn];
         if(activeHero.activeAbility == null)
         {
-            map[X][Y].toggleMouseHighlight();
+            map[X][Y].toggleMouseHighlight(addHighlight);
         }
         else
         {
-            map[X][Y].toggleMouseHighlight();
+            activeHero.activeAbility.mouseOver(map[X][Y], addHighlight);
         }
     }
 
@@ -160,7 +160,15 @@ public class MapManager : MonoBehaviour
     {
         Hero activeHero = turnOrder[currTurn];
         if(activeHero.activeAbility == null) {return;}
-        activeHero.activeAbility.UseAbility(loc);
+        int advancedTime = activeHero.activeAbility.getCost();
+        if(activeHero.activeAbility.UseAbility(loc))
+        {
+            foreach(Transform t in activeHero.transform.Find("Canvas"))
+            {
+                Ability a = t.gameObject.GetComponent(typeof(Ability)) as Ability;
+                a.advCooldown(advancedTime);
+            }
+        }
     }
 
     //Checks an X,Y position to see if it is within the generated tilemap. If it is, returns the associated tile.
