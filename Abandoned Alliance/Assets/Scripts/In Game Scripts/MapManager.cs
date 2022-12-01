@@ -69,6 +69,8 @@ public class MapManager : MonoBehaviour
             {
                 Tile spawnedTile = Instantiate(tilePrefab, new Vector3(startX+i, startY+j), Quaternion.identity);
                 spawnedTile.name = $"Tile {i} {j}";
+                if(blockedTilesPos < blockedTiles.Count && blockedTiles[blockedTilesPos].x == i && blockedTiles[blockedTilesPos].z < j && blockedTilesPos < blockedTiles.Count-1 && blockedTiles[blockedTilesPos+1].x == i) {++blockedTilesPos;}
+
                 if(blockedTilesPos < blockedTiles.Count && blockedTiles[blockedTilesPos].x == i && blockedTiles[blockedTilesPos].y <= j && blockedTiles[blockedTilesPos].z >= j)
                 {
                     spawnedTile.init(2, myself, i, j);
