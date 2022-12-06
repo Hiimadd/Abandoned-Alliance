@@ -5,21 +5,21 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     [SerializeField] 
-    private Camera cam;
+    private Camera _cam;
 
     [SerializeField]
-    private SpriteRenderer mapRenderer;
+    private SpriteRenderer _mapRenderer;
 
-    private float mapMinX, mapMinY, mapMaxX, mapMaxY;
-    private Vector3 dragOrigin;
+    private float _mapMinX, _mapMinY, _mapMaxX, _mapMaxY;
+    private Vector3 _dragOrigin;
 
     private void Awake()
     {
-        mapMinX = mapRenderer.transform.position.x - mapRenderer.bounds.size.x / 2f;
-        mapMaxX = mapRenderer.transform.position.x + mapRenderer.bounds.size.x / 2f;
+        _mapMinX = _mapRenderer.transform.position.x - _mapRenderer.bounds.size.x / 2f;
+        _mapMaxX = _mapRenderer.transform.position.x + _mapRenderer.bounds.size.x / 2f;
 
-        mapMinY = mapRenderer.transform.position.y - mapRenderer.bounds.size.y / 2f;
-        mapMaxY = mapRenderer.transform.position.y + mapRenderer.bounds.size.y / 2f;
+        _mapMinY = _mapRenderer.transform.position.y - _mapRenderer.bounds.size.y / 2f;
+        _mapMaxY = _mapRenderer.transform.position.y + _mapRenderer.bounds.size.y / 2f;
     }
 
     private void LateUpdate()
@@ -32,14 +32,14 @@ public class CameraMovement : MonoBehaviour
         //save mouse pos in world space and when drag starts
         if (Input.GetMouseButtonDown(0))
         {
-            dragOrigin = cam.ScreenToWorldPoint(Input.mousePosition);
+            _dragOrigin = _cam.ScreenToWorldPoint(Input.mousePosition);
         }
         //calculate distance btween origin and new pos if the mouse button still held down.  
         if (Input.GetMouseButton(0))
         {
-            Vector3 difference = dragOrigin - cam.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 difference = _dragOrigin - _cam.ScreenToWorldPoint(Input.mousePosition);
             //move cam by that distance
-            cam.transform.position = ClampCam(cam.transform.position + difference);
+            _cam.transform.position = ClampCam(_cam.transform.position + difference);
         }
     }
 
@@ -48,13 +48,13 @@ public class CameraMovement : MonoBehaviour
     private Vector3 ClampCam(Vector3 targetPos)
     {
         //takeing the cam width and height
-        float camHeight = cam.orthographicSize;
-        float camWidth = cam.orthographicSize * cam.aspect;
+        float camHeight = _cam.orthographicSize;
+        float camWidth = _cam.orthographicSize * _cam.aspect;
 
-        float minX = mapMinX + camWidth;
-        float maxX = mapMaxX - camWidth;
-        float minY = mapMinY + camHeight;
-        float maxY = mapMaxY - camHeight;
+        float minX = _mapMinX + camWidth;
+        float maxX = _mapMaxX - camWidth;
+        float minY = _mapMinY + camHeight;
+        float maxY = _mapMaxY - camHeight;
 
         //clamp the X and Y position of the clamp
         float newX = Mathf.Clamp(targetPos.x, minX, maxX);
