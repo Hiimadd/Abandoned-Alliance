@@ -6,7 +6,7 @@ using UnityEngine.Tilemaps;
 public class Hero : MonoBehaviour
 {
     public Ability activeAbility;
-    private MapManager mapManager;
+    private MapManager _mapManager;
     private bool isDummy;
     private int maxHealth;
     private int currHealth;
@@ -20,33 +20,39 @@ public class Hero : MonoBehaviour
     private Tilemap fog;
 
     //Move Hero to the passed in Tile's location. Verifies that the tile it is currently associated with has that association removed first.
-    public void updatePosition(Tile loc)
+    public void UpdatePosition(Tile loc)
     {
-        if(currLoc != null) {currLoc.setHero(null);}
+        if(currLoc != null) 
+        {
+            currLoc.SetHero(null);
+        }
         transform.position = loc.transform.position;
         currLoc = loc;
-        loc.setHero(this);
-        if(!isDummy) {FogUpdate();}
+        loc.SetHero(this);
+        if(!isDummy) 
+        {
+            FogUpdate();
+        }
     }
 
-    //Return the current Tile locaiton of the hero. Especially useful for abilities, which need to reference Hero position to calculate distance.
+    //Return the current Tile location of the hero. Especially useful for abilities, which need to reference Hero position to calculate distance.
     public Tile getCurrentPos() {return currLoc;}
 
     //Returns the current health of the Hero
     public int getHealth() {return currHealth;}
 
-    //Returns the maximum health of the Hero
-    //Unlikely to be used in isolaiton, mostly useful for calculating currHealth:maxHealth ratio.
+    //Returns the maximum health of the Hero.
+    //Unlikely to be used in isolation, mostly useful for calculating currHealth:maxHealth ratio.
     public int getMaxHealth() {return maxHealth;}
 
-    //Pass in the amount the health should change by, positive = increase in health, negative = decrease in health
+    //Pass in the amount the health should change by, positive = increase in health, negative = decrease in health.
     //Will not increase health above the character's initial health points.
     //Will also tell the associated MapManager to delete itself if health is reduced to/below zero.
     public void changeHealth(int change)
     {
         currHealth += change;
         if(currHealth > maxHealth) {currHealth = maxHealth;}
-        if(currHealth < 1) {currLoc.setHero(null); mapManager.killHero(this);}
+        if(currHealth < 1) {currLoc.SetHero(null); _mapManager.killHero(this);}
     }
 
     //Returns the number of action points a Hero has remaining on their turn.
@@ -72,7 +78,7 @@ public class Hero : MonoBehaviour
     public bool checkIsDummy() {return isDummy;}
 
     //Returns the MapManager that spawned this Hero. Useful in passing information between abilities and the MapManager, as abilities do not have a direct reference to the MapManager.
-    public MapManager getMapManager() {return mapManager;}
+    public MapManager getMapManager() {return _mapManager;}
 
     //Roughly equivelent to a constructor, this is called on Hero creation to set the properties of the generated unit.
     public void init(int Health,int Defense,int MoveSpeed,int ActionPoints,int Damage,int SightRange, bool dummy, Tile loc, MapManager mm, Tilemap tm)
@@ -84,9 +90,9 @@ public class Hero : MonoBehaviour
         damage = Damage;
         sightRange = SightRange;
         isDummy = dummy;
-        mapManager = mm;
+        _mapManager = mm;
         fog = tm;
-        updatePosition(loc);
+        UpdatePosition(loc);
         
     }
 

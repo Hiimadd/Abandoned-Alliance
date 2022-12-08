@@ -43,7 +43,7 @@ public class MoveAbility : Ability
         int dY = Mathf.Abs(currLoc.getY() - loc.getY());
         if(((dX == 1 && dY == 0) || (dX == 0 && dY == 1) || (dX == 1 && dY == 1)) && loc.getHero() == null && loc.getType() == 1)
         {
-            attachedHero.updatePosition(loc);
+            attachedHero.UpdatePosition(loc);
             attachedHero.getMapManager().advTurn(cost);
             used = true;
         }

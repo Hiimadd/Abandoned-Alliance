@@ -30,7 +30,7 @@ public class Tile : MonoBehaviour
     public int getY() {return Y;}
 
     //Update the tracking of the Hero which is currently on this tile
-    public void setHero(Hero hero)
+    public void SetHero(Hero hero)
     {
         currUnit = hero;
     }
