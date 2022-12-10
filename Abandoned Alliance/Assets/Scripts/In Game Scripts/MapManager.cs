@@ -297,6 +297,55 @@ public class MapManager : MonoBehaviour
         }
     }
 
+    
+    //Functionally a placeholder for more advanced AI scripts that will be contained within the Hero class, or a class that inherits Hero,
+    //This method simply takes a dummy and attempts to attack any non-dummy units within its one-tile range.
+    private void dummyAttack(int turn)
+    {
+        Hero currDummy = TurnOrder[turn];
+        Tile currPos = currDummy.GetCurrentPos();
+        checkTile(ref currPos, 5, 0);
+        currDummy.UpdatePosition(currPos);
+    }
+
+    private void checkTile(ref Tile currPos, int width_check, int curr_width) {
+        //base case: if dummy radius exceeds the check limit
+        if(curr_width > width_check) {return;}
+        for(int i = -1 - curr_width; i < 2 + curr_width; i++){
+            for(int j = -1 - curr_width; j < 2 + curr_width; j++){
+                if(j == 0 && i == 0) {continue;}//skip origin tile
+                Tile check = GetPos(currPos.GetX() + i, currPos.GetY() + j); // get the tile we are checking
+                //Debug.Log($"checking: {new_x} {new_y}");
+                //check if the tile has a hero(not a dummy)
+                if(check != null && check.GetHero() != null && check.GetHero().CheckIsDummy() == false && check.GetTileType() == 1) { 
+                    //if the hero is more than 1 tile away, move instead of attack
+                    if(curr_width > 0) {
+                        //based on the tile being checked on, obtain nearest tile in first level of tiles
+                        int new_x = 0 , new_y = 0;
+                        if(check.GetX() < currPos.GetX()) { new_x = -1;}
+                        else if(check.GetX() > currPos.GetX()) { new_x= 1; }
+                        if(check.GetY() < currPos.GetY()) {new_y = -1; }
+                        else if(check.GetY() > currPos.GetY()) {new_y = 1; }
+                        //create new nearest tile 
+                        Tile nearest = GetPos( currPos.GetX() + new_x , currPos.GetY() + new_y);
+                        if(nearest != null && nearest.GetTileType() == 1 && nearest.GetHero() == null) {
+                            currPos = nearest;
+                        }
+                        return;
+                    }
+                    //else attack
+                    check.GetHero().ChangeHealth(-1*currPos.GetHero().GetDamage());
+                    return;
+                }
+                //if the tile is a dummy or non-walkable skip           
+        }
+    }
+    //if checked the entire surrounding level move on to next level
+    checkTile(ref currPos, width_check, curr_width + 1);
+}
+
+
+/*
     //Functionally a placeholder for more advanced AI scripts that will be contained within the Hero class, or a class that inherits Hero,
     //This method simply takes a dummy and attempts to attack any non-dummy units within its one-tile range.
     private void dummyAttack(int turn)
@@ -320,7 +369,7 @@ public class MapManager : MonoBehaviour
             }
         }
     }
-
+*/
     //Called on scene load. Used to execute the two functions that initialize the entire map.
     void Start()
     {
