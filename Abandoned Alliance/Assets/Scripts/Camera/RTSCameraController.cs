@@ -12,8 +12,8 @@ public class RTSCameraController : MonoBehaviour
 
     private float _mapMinX, _mapMinY, _mapMaxX, _mapMaxY;
 
-    public float panSpeed = 20f;
-    public float panBorderThickness = 10f;
+    public float PanSpeed = 20f;
+    public float PanBorderThickness = 10f;
 
 
     private void Awake()
@@ -30,24 +30,24 @@ public class RTSCameraController : MonoBehaviour
     {
         Vector3 pos = transform.position;
 
-        if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height - panBorderThickness)
+        if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height - PanBorderThickness)
         {
-            pos.y += panSpeed * Time.deltaTime;
+            pos.y += PanSpeed * Time.deltaTime;
         }
 
-        if (Input.GetKey("a") || Input.mousePosition.x <= panBorderThickness)
+        if (Input.GetKey("a") || Input.mousePosition.x <= PanBorderThickness)
         {
-            pos.x -= panSpeed * Time.deltaTime;
+            pos.x -= PanSpeed * Time.deltaTime;
         }
 
-        if (Input.GetKey("s") || Input.mousePosition.y <= panBorderThickness)
+        if (Input.GetKey("s") || Input.mousePosition.y <= PanBorderThickness)
         {
-            pos.y -= panSpeed * Time.deltaTime;
+            pos.y -= PanSpeed * Time.deltaTime;
         }
 
-        if (Input.GetKey("d") || Input.mousePosition.x >= Screen.width - panBorderThickness)
+        if (Input.GetKey("d") || Input.mousePosition.x >= Screen.width - PanBorderThickness)
         {
-            pos.x += panSpeed * Time.deltaTime;
+            pos.x += PanSpeed * Time.deltaTime;
         }
         transform.position = ClampCam(pos);
     }
