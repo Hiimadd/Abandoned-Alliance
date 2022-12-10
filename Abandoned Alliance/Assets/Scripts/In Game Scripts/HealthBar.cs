@@ -5,20 +5,20 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    private Slider healthBar;
-    [SerializeField] private Hero attachedHero;
+    private Slider _healthBar;
+    [SerializeField] private Hero _attachedHero;
 
 
     private void Start()
     {
-        healthBar = GetComponent<Slider>();
-        healthBar.maxValue = attachedHero.getMaxHealth();
-        healthBar.value = attachedHero.getMaxHealth();
+        _healthBar = GetComponent<Slider>();
+        _healthBar.maxValue = _attachedHero.GetMaxHealth();
+        _healthBar.value = _attachedHero.GetMaxHealth();
     }
 
     public void Update()
     {
-        healthBar.value = attachedHero.getHealth();
+        _healthBar.value = _attachedHero.GetHealth();
     }
 }
 

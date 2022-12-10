@@ -96,11 +96,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b1fe53c01876584c95ceee7c6cb17ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transparent: {r: 1, g: 1, b: 1, a: 0}
-  highlight: {r: 1, g: 1, b: 1, a: 0.3529412}
-  abilityHighlight: {r: 1, g: 1, b: 1, a: 0.19607843}
-  invalidAbilityHighlight: {r: 1, g: 1, b: 1, a: 0.08627451}
-  Renderer: {fileID: 3069235704206801309}
+  _transparent: {r: 1, g: 1, b: 1, a: 0}
+  _highlight: {r: 1, g: 1, b: 1, a: 0.3529412}
+  _abilityHighlight: {r: 1, g: 1, b: 1, a: 0.19607843}
+  _invalidAbilityHighlight: {r: 1, g: 1, b: 1, a: 0.08627451}
+  _renderer: {fileID: 3069235704206801309}
 --- !u!61 &-8157624376997324081
 BoxCollider2D:
   m_ObjectHideFlags: 0

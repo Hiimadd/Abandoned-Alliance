@@ -7,22 +7,25 @@ public class ThrustAbility : Ability
 {
     protected override void toggleAbilityHighlights()
     {
-        Tile currLoc = attachedHero.getCurrentPos();
-            for(int i = -range; i < range+1; ++i)
+        Tile currLoc = AttachedHero.GetCurrentPos();
+            for(int i = -_range; i < _range+1; ++i)
             {
-                for(int j = -range; j < range+1; ++j)
+                for(int j = -_range; j < _range+1; ++j)
                 {
-                    if(j == 0 && i == 0) {continue;}
-                    Tile toHighlight = attachedHero.getMapManager().getPos(currLoc.getX() + i, currLoc.getY() +j);
+                    if(j == 0 && i == 0)
+                    {
+                        continue;
+                    }
+                    Tile toHighlight = AttachedHero.GetMapManager().GetPos(currLoc.GetX() + i, currLoc.GetY() +j);
                     if(toHighlight != null) 
                     {
-                        if(toHighlight.getHero() != null && toHighlight.getType() == 1)
+                        if(toHighlight.GetHero() != null && toHighlight.GetTileType() == 1)
                         {
-                            toHighlight.toggleAbilityHighlight();
+                            toHighlight.ToggleAbilityHighlight();
                         }
                         else
                         {
-                            toHighlight.toggleInvalidAbilityHighlight();
+                            toHighlight.ToggleInvalidAbilityHighlight();
                         }
                     }
                 }
@@ -33,73 +36,102 @@ public class ThrustAbility : Ability
     {
         bool used = false;
         toggleAbilityHighlights();
-        Tile currLoc = attachedHero.getCurrentPos();
-        float dX = currLoc.getX() - loc.getX();
-        float dY = currLoc.getY() - loc.getY();
+        Tile currLoc = AttachedHero.GetCurrentPos();
+        float dX = currLoc.GetX() - loc.GetX();
+        float dY = currLoc.GetY() - loc.GetY();
         if((Mathf.Abs(dX) == 1 && dY == 0) || (dX == 0 && Mathf.Abs(dY) == 1) || (Mathf.Abs(dX) == 1 && Mathf.Abs(dY) == 1)) //is this a place the player could attack?
         {
-            if(loc.getHero() != null) {used = true; loc.getHero().changeHealth(-1*damage);}
+            if(loc.GetHero() != null)
+            {
+                used = true;
+                loc.GetHero().ChangeHealth(-1*_damage);
+            }
 
             if(Mathf.Abs(dX) == 0) //either left or right of the hero, centered
             {
-                Tile reach = attachedHero.getMapManager().getPos(loc.getX(), loc.getY()-(int)dY);
-                if(reach != null && reach.getHero() != null) {reach.getHero().changeHealth(-1*damage); used = true;}
+                Tile reach = AttachedHero.GetMapManager().GetPos(loc.GetX(), loc.GetY()-(int)dY);
+                if(reach != null && reach.GetHero() != null)
+                {
+                    reach.GetHero().ChangeHealth(-1*_damage);
+                    used = true;
+                }
 
             }
             else if(Mathf.Abs(dY) == 0) //either above or below the hero, centered
             {
-                Tile reach = attachedHero.getMapManager().getPos(loc.getX()-(int)dX, loc.getY());
-                if(reach != null && reach.getHero() != null) {reach.getHero().changeHealth(-1*damage); used = true;}
+                Tile reach = AttachedHero.GetMapManager().GetPos(loc.GetX()-(int)dX, loc.GetY());
+                if(reach != null && reach.GetHero() != null)
+                {
+                    reach.GetHero().ChangeHealth(-1*_damage);
+                    used = true;
+                }
 
             }
             else //one of the four corners
             {
-                Tile reach = attachedHero.getMapManager().getPos(loc.getX()-(int)dX, loc.getY()-(int)dY);
-                if(reach != null && reach.getHero() != null) {reach.getHero().changeHealth(-1*damage); used = true;}
+                Tile reach = AttachedHero.GetMapManager().GetPos(loc.GetX()-(int)dX, loc.GetY()-(int)dY);
+                if(reach != null && reach.GetHero() != null)
+                {
+                    reach.GetHero().ChangeHealth(-1*_damage);
+                    used = true;
+                }
 
             }
         }
-        if(used) {attachedHero.getMapManager().advTurn(cost); remainingCooldown = cooldown;}
-        attachedHero.activeAbility = null;
+        if(used)
+        {
+            AttachedHero.GetMapManager().AdvTurn(_cost);
+            _remainingCooldown = _cooldown;
+        }
+        AttachedHero.ActiveAbility = null;
         return used;
     }
 
-    public override void mouseOver(Tile loc, bool addHighlight)
+    public override void MouseOver(Tile loc, bool addHighlight)
     {
-        loc.toggleMouseHighlight(addHighlight);
-        Tile currLoc = attachedHero.getCurrentPos();
-        float dX = currLoc.getX() - loc.getX();
-        float dY = currLoc.getY() - loc.getY();
+        loc.ToggleMouseHighlight(addHighlight);
+        Tile currLoc = AttachedHero.GetCurrentPos();
+        float dX = currLoc.GetX() - loc.GetX();
+        float dY = currLoc.GetY() - loc.GetY();
         if((Mathf.Abs(dX) == 1 && dY == 0) || (dX == 0 && Mathf.Abs(dY) == 1) || (Mathf.Abs(dX) == 1 && Mathf.Abs(dY) == 1)) //is this a place the player could attack?
         {
             if(Mathf.Abs(dX) == 0) //either left or right of the hero, centered
             {
-                Tile reach = attachedHero.getMapManager().getPos(loc.getX(), loc.getY()-(int)dY);
-                if(reach != null) {reach.toggleMouseHighlight(addHighlight);}
+                Tile reach = AttachedHero.GetMapManager().GetPos(loc.GetX(), loc.GetY()-(int)dY);
+                if(reach != null)
+                {
+                    reach.ToggleMouseHighlight(addHighlight);
+                }
 
             }
             else if(Mathf.Abs(dY) == 0) //either above or below the hero, centered
             {
-                Tile reach = attachedHero.getMapManager().getPos(loc.getX()-(int)dX, loc.getY());
-                if(reach != null) {reach.toggleMouseHighlight(addHighlight);}
+                Tile reach = AttachedHero.GetMapManager().GetPos(loc.GetX()-(int)dX, loc.GetY());
+                if(reach != null)
+                {
+                    reach.ToggleMouseHighlight(addHighlight);
+                }
 
             }
             else //one of the four corners
             {
-                Tile reach = attachedHero.getMapManager().getPos(loc.getX()-(int)dX, loc.getY()-(int)dY);
-                if(reach != null) {reach.toggleMouseHighlight(addHighlight);}
+                Tile reach = AttachedHero.GetMapManager().GetPos(loc.GetX()-(int)dX, loc.GetY()-(int)dY);
+                if(reach != null)
+                {
+                    reach.ToggleMouseHighlight(addHighlight);
+                }
 
             }
         }
     }
 
-    public override void init()
+    public override void Init()
     {
-        cost = 1;
-        damage = (int)(1.5 * attachedHero.getDamage());
-        range = 2;
-        cooldown = 3;
-        abilityName = "Thrust";
-        transform.GetChild(0).gameObject.GetComponent<Text>().text = $"{abilityName}- {cost} AP to use.";
+        _cost = 1;
+        _damage = (int)(1.5 * AttachedHero.GetDamage());
+        _range = 2;
+        _cooldown = 3;
+        AbilityName = "Thrust";
+        transform.GetChild(0).gameObject.GetComponent<Text>().text = $"{AbilityName}- {_cost} AP to use.";
     }
 }

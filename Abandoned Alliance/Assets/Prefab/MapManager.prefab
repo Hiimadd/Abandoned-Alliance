@@ -204,21 +204,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7168a732a04d4eb468f0e965ffcf87ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnOrder: []
-  currTurn: 0
-  tilePrefab: {fileID: 3069235704206801308, guid: 427537a166ce06849b95e08e65a4b7af, type: 3}
-  myself: {fileID: 4510723194942297430}
-  heroPrefab: {fileID: 1781608586911464113, guid: 4f17b8a324ef1de49b974465b6ba131e, type: 3}
-  fog: {fileID: 0}
-  width: 32
-  height: 32
-  startX: 0
-  startY: 0
-  blockedTiles: []
-  toSpawn: []
-  objective:
-    exitLoc: {x: 0, y: 0}
-    needClearLevel: 0
+  TurnOrder: []
+  CurrTurn: 0
+  _tilePrefab: {fileID: 3069235704206801308, guid: 427537a166ce06849b95e08e65a4b7af, type: 3}
+  _myself: {fileID: 4510723194942297430}
+  _heroPrefab: {fileID: 1781608586911464113, guid: 4f17b8a324ef1de49b974465b6ba131e, type: 3}
+  _fog: {fileID: 0}
+  _width: 32
+  _height: 32
+  _startX: 0
+  _startY: 0
+  _blockedTiles: []
+  _toSpawn: []
+  _objective:
+    ExitLoc: {x: 0, y: 0}
+    NeedClearLevel: 0
 --- !u!114 &5233836118720084518
 MonoBehaviour:
   m_ObjectHideFlags: 0

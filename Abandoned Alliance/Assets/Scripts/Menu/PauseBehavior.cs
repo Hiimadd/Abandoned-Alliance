@@ -40,7 +40,7 @@ public class PauseBehavior : MonoBehaviour
     {
     	paused = true;
     	Time.timeScale = 0;
-    	curCan = manager.turnOrder[manager.currTurn].transform.Find("Canvas").gameObject;
+    	curCan = manager.TurnOrder[manager.CurrTurn].transform.Find("Canvas").gameObject;
     	curCan.SetActive(false);
     	pMenu.SetActive(true);
     	cam.GetComponent<CameraMovement>().enabled = false;

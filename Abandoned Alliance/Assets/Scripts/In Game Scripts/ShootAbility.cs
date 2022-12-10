@@ -3,25 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MoveAbility : Ability
+public class ShootAbility : Ability
 {
-    //Implementation of toggleAbilityHighlights for MoveAbility.
-    //Checks to make sure the tiles are on the grid, of type 1 (walkable), and aren't already occupied.
     protected override void toggleAbilityHighlights()
     {
         Tile currLoc = AttachedHero.GetCurrentPos();
-            for(int i = -1; i < 2; ++i)
+            for(int i = -_range; i < _range+1; ++i)
             {
-                for(int j = -1; j < 2; ++j)
+                for(int j = -_range; j < _range+1; ++j)
                 {
                     if(j == 0 && i == 0)
                     {
                         continue;
                     }
                     Tile toHighlight = AttachedHero.GetMapManager().GetPos(currLoc.GetX() + i, currLoc.GetY() +j);
-                    if(toHighlight != null)
+                    if(toHighlight != null) 
                     {
-                        if(toHighlight.GetHero() == null && toHighlight.GetTileType() == 1)
+                        if(toHighlight.GetHero() != null && toHighlight.GetTileType() == 1)
                         {
                             toHighlight.ToggleAbilityHighlight();
                         }
@@ -34,19 +32,17 @@ public class MoveAbility : Ability
             }
     }
 
-    //Implementation of useAbility for MoveAbility.
-    //Checks distance of clicked tile from the Hero's current position, and moves
-    //if the tile has a distance of 1, is open, and is walkable.
+
     public override bool UseAbility(Tile loc)
     {
         bool used = false;
         toggleAbilityHighlights();
         Tile currLoc = AttachedHero.GetCurrentPos();
-        int dX = Mathf.Abs(currLoc.GetX() - loc.GetX());
-        int dY = Mathf.Abs(currLoc.GetY() - loc.GetY());
-        if(((dX == 1 && dY == 0) || (dX == 0 && dY == 1) || (dX == 1 && dY == 1)) && loc.GetHero() == null && loc.GetTileType() == 1)
+        float dX = Mathf.Abs(currLoc.GetX() - loc.GetX());
+        float dY = Mathf.Abs(currLoc.GetY() - loc.GetY());
+        if(loc.GetHero() != null && Mathf.Sqrt(Mathf.Pow(dX, 2) + Mathf.Pow(dY, 2)) <= _range)
         {
-            AttachedHero.UpdatePosition(loc);
+            loc.GetHero().ChangeHealth(-1*AttachedHero.GetDamage());
             AttachedHero.GetMapManager().AdvTurn(_cost);
             used = true;
         }
@@ -54,17 +50,14 @@ public class MoveAbility : Ability
         return used;
     }
 
-    //Implementation of init for MoveAbility.
-    //Just initializes the variables of the ability, not much to explain here.
-    //Worth pointing out that range is currently unused for MoveAbility.
+
     public override void Init()
     {
         _cost = 1;
-        _damage = 0;
-        _range = AttachedHero.GetMoveSpeed();
+        _damage = AttachedHero.GetDamage();
+        _range = 8;
         _cooldown = 0;
-        AbilityName = "Move";
+        AbilityName = "Shoot Bow";
         transform.GetChild(0).gameObject.GetComponent<Text>().text = $"{AbilityName}- {_cost} AP to use.";
     }
-
 }
