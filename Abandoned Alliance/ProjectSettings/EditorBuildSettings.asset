@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Map1FullSize.unity
     guid: abf6c78ce81529a4f8cf2634661f7a1a
+  - enabled: 1
+    path: Assets/Scenes/Map2FullSize.unity
+    guid: 5c620c79bd6d6c04dade54c510946660
+  - enabled: 1
+    path: Assets/Scenes/Map3FullSize.unity
+    guid: f7943f1acf6fd4c43a7b6c4a66adf115
+  - enabled: 1
+    path: Assets/Scenes/Map4FullSize.unity
+    guid: 69a106855f302454197e7d78b37733d0
   m_configObjects: {}
